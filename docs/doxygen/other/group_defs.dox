@@ -1,0 +1,6 @@
+/*!
+ * \defgroup block GNU Radio READER C++ Signal Processing Blocks
+ * \brief All C++ blocks that can be used from the READER GNU Radio
+ *        module are listed here or in the subcategories below.
+ *
+ */

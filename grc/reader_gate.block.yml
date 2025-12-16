@@ -1,0 +1,31 @@
+id: reader_gate
+label: gate
+category: '[reader]'
+
+templates:
+  imports: from gnuradio import reader
+  make: reader.gate(${sample_rate})
+
+#  Make one 'parameters' list entry for every parameter you want settable from the GUI.
+#     Keys include:
+#     * id (makes the value accessible as keyname, e.g. in the make entry)
+#     * label (label shown in the GUI)
+#     * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
+#     * default
+parameters:
+- id: sample_rate
+  label: Sample_rate
+  dtype: int
+  default: 2500000
+
+inputs:
+- label: int
+  domain: stream
+  dtype: complex
+
+outputs:
+- label: out
+  domain: stream
+  dtype: complex
+
+file_format: 1

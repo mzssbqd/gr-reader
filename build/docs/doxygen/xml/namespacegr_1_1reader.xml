@@ -1,0 +1,766 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacegr_1_1reader" kind="namespace" language="C++">
+    <compoundname>gr::reader</compoundname>
+    <innerclass refid="classgr_1_1reader_1_1gate" prot="public">gr::reader::gate</innerclass>
+    <innerclass refid="structgr_1_1reader_1_1READER__STATS" prot="public">gr::reader::READER_STATS</innerclass>
+    <innerclass refid="structgr_1_1reader_1_1READER__STATE" prot="public">gr::reader::READER_STATE</innerclass>
+    <innerclass refid="classgr_1_1reader_1_1reader" prot="public">gr::reader::reader</innerclass>
+    <innerclass refid="classgr_1_1reader_1_1tag__decoder" prot="public">gr::reader::tag_decoder</innerclass>
+    <innerclass refid="classgr_1_1reader_1_1gate__impl" prot="public">gr::reader::gate_impl</innerclass>
+    <innerclass refid="classgr_1_1reader_1_1reader__impl" prot="public">gr::reader::reader_impl</innerclass>
+    <innerclass refid="classgr_1_1reader_1_1tag__decoder__impl" prot="public">gr::reader::tag_decoder_impl</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacegr_1_1reader_1aa6ddba31062f1855baea426adf9d04b3" prot="public" static="no" strong="no">
+        <type></type>
+        <name>STATUS</name>
+        <enumvalue id="namespacegr_1_1reader_1aa6ddba31062f1855baea426adf9d04b3ade78b304b92222a84e3d1e9cf7993fec" prot="public">
+          <name>RUNNING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1reader_1aa6ddba31062f1855baea426adf9d04b3a354f4ca7ede5fedcb69bdd513c047360" prot="public">
+          <name>TERMINATED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="20" column="5" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>GEN2_LOGIC_STATUS</name>
+        <enumvalue id="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84ead4606eae53dc8474770f7523a85e5a53" prot="public">
+          <name>SEND_QUERY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84ea3200fe1bb7622caf96573fcb59662cc1" prot="public">
+          <name>SEND_ACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84ea7e28c8fcac21b476b7a98471de57deb3" prot="public">
+          <name>SEND_QUERY_REP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84ea524761f415ab17aaf6efd6002287e8fc" prot="public">
+          <name>IDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84ea1c1f45eb60f9043687e9d786bff7c2ac" prot="public">
+          <name>SEND_CW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84ea59fa2b8a9729f1f5e3d6a52df0308565" prot="public">
+          <name>START</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84eaf7edbce57d728a0cb49d7a5f79a60b6b" prot="public">
+          <name>SEND_QUERY_ADJUST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84eac1722ca6014c0bfef0208f555a25a075" prot="public">
+          <name>SEND_NAK_QR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84ea73f68ec46364ce4dafbd2ffb1f475951" prot="public">
+          <name>SEND_NAK_Q</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84eafdeab2ead1ba4a7edc38d5a2f388bbb6" prot="public">
+          <name>POWER_DOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="21" column="5" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacegr_1_1reader_1ac8c38c3c6822cfad5cd4fb05c30927ac" prot="public" static="no" strong="no">
+        <type></type>
+        <name>GATE_STATUS</name>
+        <enumvalue id="namespacegr_1_1reader_1ac8c38c3c6822cfad5cd4fb05c30927acaa2619ff99f2b792558291329378fd984" prot="public">
+          <name>GATE_OPEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1reader_1ac8c38c3c6822cfad5cd4fb05c30927aca1f67eb0be6b3cfddf30325b058058e93" prot="public">
+          <name>GATE_CLOSED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1reader_1ac8c38c3c6822cfad5cd4fb05c30927acae82c6970dc98ed62e26dde670fa0c03d" prot="public">
+          <name>GATE_SEEK_RN16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1reader_1ac8c38c3c6822cfad5cd4fb05c30927aca689f51eb145050d83b38a16b254e156f" prot="public">
+          <name>GATE_SEEK_EPC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1reader_1ac8c38c3c6822cfad5cd4fb05c30927aca30c96dd14653ce3600d5851f04fc6149" prot="public">
+          <name>GATE_Handle</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="22" column="5" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacegr_1_1reader_1a58e34f0b1b6ddfccb60d341182cd422a" prot="public" static="no" strong="no">
+        <type></type>
+        <name>DECODER_STATUS</name>
+        <enumvalue id="namespacegr_1_1reader_1a58e34f0b1b6ddfccb60d341182cd422aa149ce4b3391283cf3c7fa4cd1f08341e" prot="public">
+          <name>DECODER_DECODE_RN16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1reader_1a58e34f0b1b6ddfccb60d341182cd422aa085fd93afeefa2255973977eef73d067" prot="public">
+          <name>DECODER_DECODE_EPC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="23" column="5" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a3d4e65eaba5ca47419bf1b7b9fbaef58" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::FIXED_Q</definition>
+        <argsstring></argsstring>
+        <name>FIXED_Q</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="57" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a0e9558f84cc0aebd9e86511a235fb32b" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::MAX_NUM_QUERIES</definition>
+        <argsstring></argsstring>
+        <name>MAX_NUM_QUERIES</name>
+        <initializer>= 1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="60" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1acb973189861ad815cb9fa138776da18a" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::Q_VALUE[16][4]</definition>
+        <argsstring>[16][4]</argsstring>
+        <name>Q_VALUE</name>
+        <initializer>=  
+    {
+        {0,0,0,0}, {0,0,0,1}, {0,0,1,0}, {0,0,1,1}, 
+        {0,1,0,0}, {0,1,0,1}, {0,1,1,0}, {0,1,1,1}, 
+        {1,0,0,0}, {1,0,0,1}, {1,0,1,0}, {1,0,1,1},
+        {1,1,0,0}, {1,1,0,1}, {1,1,1,0}, {1,1,1,1}
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="63" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a9f95b9e1c5a79738ea1d180366bcf036" prot="public" static="no" mutable="no">
+        <type>const bool</type>
+        <definition>const bool gr::reader::P_DOWN</definition>
+        <argsstring></argsstring>
+        <name>P_DOWN</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="71" column="16" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a963b68ab3ccb8b7736afd1a0a83237a1" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::CW_D</definition>
+        <argsstring></argsstring>
+        <name>CW_D</name>
+        <initializer>= 250</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="75" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1affb029fac8c161552088de74243bbb15" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::P_DOWN_D</definition>
+        <argsstring></argsstring>
+        <name>P_DOWN_D</name>
+        <initializer>= 2000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="76" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a665f2af132101acac0dc9dd33aadc075" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::T1_D</definition>
+        <argsstring></argsstring>
+        <name>T1_D</name>
+        <initializer>= 240</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="77" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1af992c8d578d0dd8baeecf2dffeacedb2" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::T2_D</definition>
+        <argsstring></argsstring>
+        <name>T2_D</name>
+        <initializer>= 480</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="78" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a3108c38023771ecbd7420eacda741bd7" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::PW_D</definition>
+        <argsstring></argsstring>
+        <name>PW_D</name>
+        <initializer>= 12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="79" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a40e09ca1792d9b7cfdece7034f375278" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::DELIM_D</definition>
+        <argsstring></argsstring>
+        <name>DELIM_D</name>
+        <initializer>= 12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="80" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a34d802dc8e1218c6e24d30af5814bdb6" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::TRCAL_D</definition>
+        <argsstring></argsstring>
+        <name>TRCAL_D</name>
+        <initializer>= 200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="81" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1adf1cc67e793b1ad4a36e0cedbad8b447" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::RTCAL_D</definition>
+        <argsstring></argsstring>
+        <name>RTCAL_D</name>
+        <initializer>= 72</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="82" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a779408e3199a3d710fc2d68b9b24db20" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::NUM_PULSES_COMMAND</definition>
+        <argsstring></argsstring>
+        <name>NUM_PULSES_COMMAND</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="87" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a9ce1cacf1aebfb39e3d17d65ca54559b" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::NUMBER_UNIQUE_TAGS</definition>
+        <argsstring></argsstring>
+        <name>NUMBER_UNIQUE_TAGS</name>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="88" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1af00018c2ad382f2f130e4365b40f1f04" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float gr::reader::THRESH_FRACTION</definition>
+        <argsstring></argsstring>
+        <name>THRESH_FRACTION</name>
+        <initializer>= 0.75</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="89" column="17" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a0be346a85580d11e8e1f7cd3aa1ea060" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::WIN_SIZE_D</definition>
+        <argsstring></argsstring>
+        <name>WIN_SIZE_D</name>
+        <initializer>= 250</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="90" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1ac5642ec46cf581dd8730688ee218f53e" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::PILOT_TONE</definition>
+        <argsstring></argsstring>
+        <name>PILOT_TONE</name>
+        <initializer>= 12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="93" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1aefd739ea52f67d6f3008515c47932e23" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::TAG_PREAMBLE_BITS</definition>
+        <argsstring></argsstring>
+        <name>TAG_PREAMBLE_BITS</name>
+        <initializer>= 6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="94" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a946ebbf7bf2baedf8b7b1a754b3f653f" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::RN16_BITS</definition>
+        <argsstring></argsstring>
+        <name>RN16_BITS</name>
+        <initializer>= 17</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="95" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a579a1b098a1103b5352b75168c786690" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::EPC_BITS</definition>
+        <argsstring></argsstring>
+        <name>EPC_BITS</name>
+        <initializer>= 129</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="96" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1ae312204e98b03abde617969356e6f61c" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::QUERY_LENGTH</definition>
+        <argsstring></argsstring>
+        <name>QUERY_LENGTH</name>
+        <initializer>= 22</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="97" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a5f8b768586c2f909e356e8404c88c6a9" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::T_READER_FREQ</definition>
+        <argsstring></argsstring>
+        <name>T_READER_FREQ</name>
+        <initializer>= 40e3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="101" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a96363df08e78dc538e968dfab323af0f" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float gr::reader::TAG_BIT_D</definition>
+        <argsstring></argsstring>
+        <name>TAG_BIT_D</name>
+        <initializer>= 1.0/<ref refid="namespacegr_1_1reader_1a5f8b768586c2f909e356e8404c88c6a9" kindref="member">T_READER_FREQ</ref> * pow(10,6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="102" column="17" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1abcb47c666b27a289264e6280375b1fe4" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::RN16_D</definition>
+        <argsstring></argsstring>
+        <name>RN16_D</name>
+        <initializer>= (<ref refid="namespacegr_1_1reader_1a946ebbf7bf2baedf8b7b1a754b3f653f" kindref="member">RN16_BITS</ref> + <ref refid="namespacegr_1_1reader_1aefd739ea52f67d6f3008515c47932e23" kindref="member">TAG_PREAMBLE_BITS</ref>) * <ref refid="namespacegr_1_1reader_1a96363df08e78dc538e968dfab323af0f" kindref="member">TAG_BIT_D</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="103" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1ae93c0a583d4824278d206934a000a34e" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::EPC_D</definition>
+        <argsstring></argsstring>
+        <name>EPC_D</name>
+        <initializer>= (<ref refid="namespacegr_1_1reader_1a579a1b098a1103b5352b75168c786690" kindref="member">EPC_BITS</ref>  + <ref refid="namespacegr_1_1reader_1aefd739ea52f67d6f3008515c47932e23" kindref="member">TAG_PREAMBLE_BITS</ref>) * <ref refid="namespacegr_1_1reader_1a96363df08e78dc538e968dfab323af0f" kindref="member">TAG_BIT_D</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="104" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a3d0be86e8592605b69fdc1b6076cd45d" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::QUERY_CODE[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>QUERY_CODE</name>
+        <initializer>= {1,0,0,0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="109" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a72aabe10c596f0c90287a5f6836779ae" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::M[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>M</name>
+        <initializer>= {0,0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="110" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a81a9146ca716f48013a53acffe78d0e2" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::SEL[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>SEL</name>
+        <initializer>= {0,0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="111" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a1186382b91eef26b3b53f93435772313" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::SESSION[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>SESSION</name>
+        <initializer>= {0,0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="112" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a227287d9144757a5437f3cb8fc362b2d" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::TARGET</definition>
+        <argsstring></argsstring>
+        <name>TARGET</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="113" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1ad07b1f04a76ec416c21381a92fe06f78" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::TREXT</definition>
+        <argsstring></argsstring>
+        <name>TREXT</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="114" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a0b40513b4a0679944bb2e53adc916506" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::DR</definition>
+        <argsstring></argsstring>
+        <name>DR</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="115" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a2eb24f673d45b8e006750660a5f52cec" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::NAK_CODE[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>NAK_CODE</name>
+        <initializer>= {1,1,0,0,0,0,0,0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="118" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a7654c26c390b2f98b08348fd22676849" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::ACK_CODE[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>ACK_CODE</name>
+        <initializer>= {0,1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="121" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a73e0251f386a85f70419ed7f33c2a84b" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::QADJ_CODE[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>QADJ_CODE</name>
+        <initializer>= {1,0,0,1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="124" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a4f80d76770de9068be7e20f03584177b" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::Q_UPDN[3][3]</definition>
+        <argsstring>[3][3]</argsstring>
+        <name>Q_UPDN</name>
+        <initializer>= { {1,1,0}, {0,0,0}, {0,1,1} }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="126" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1a23ffe063c42951c544075a6751a4784b" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::TAG_PREAMBLE[]</definition>
+        <argsstring>[]</argsstring>
+        <name>TAG_PREAMBLE</name>
+        <initializer>= {1,1,0,1,0,0,1,0,0,0,1,1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="129" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1ad882dfb3fb6bb2ec3740b1b4941babc5" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::reader::DC_SIZE_D</definition>
+        <argsstring></argsstring>
+        <name>DC_SIZE_D</name>
+        <initializer>= 120</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="133" column="15" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1reader_1add9602133c95dfbf05f3432d16cb5a15" prot="public" static="no" mutable="no">
+        <type><ref refid="structgr_1_1reader_1_1READER__STATE" kindref="compound">READER_STATE</ref> *</type>
+        <definition>READER_STATE* gr::reader::reader_state</definition>
+        <argsstring></argsstring>
+        <name>reader_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="136" column="26" declfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" declline="136" declcolumn="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacegr_1_1reader_1a0814509f13ec6fcfca7959c253a01e3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="api_8h_1ad3462ec4b6ceb6ecea667b8d2858c756" kindref="member">READER_API</ref> void</type>
+        <definition>READER_API void gr::reader::initialize_reader_state</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_reader_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="137" column="28" declfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" declline="137" declcolumn="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/gate.h" line="15" column="1"/>
+  </compounddef>
+</doxygen>

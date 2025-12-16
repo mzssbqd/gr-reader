@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="classgr_1_1reader_1_1gate" kind="class"><name>gr::reader::gate</name>
+    <member refid="classgr_1_1reader_1_1gate_1a457eec6a4a8e06ac3d1ff0b1efe466de" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1reader_1_1gate_1acf3f5c1800a1f049531fcd171e5eb54e" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1reader_1_1gate__impl" kind="class"><name>gr::reader::gate_impl</name>
+    <member refid="classgr_1_1reader_1_1gate__impl_1a5d95ea6da78e200d9dce3fddf5772a00" kind="enum"><name>SIGNAL_STATE</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1a5d95ea6da78e200d9dce3fddf5772a00a378fb889f3473db2e356687cf0cf5771" kind="enumvalue"><name>NEG_EDGE</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1a5d95ea6da78e200d9dce3fddf5772a00a8a011ab11305d3cedac2c6b14c93cb42" kind="enumvalue"><name>POS_EDGE</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1ada37f59fd6fce8712fcfed7a8c839c4d" kind="variable"><name>n_samples</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1a1ae243017993b09b9656ab4ba21c34e6" kind="variable"><name>n_samples_T1</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1a39fc7f52e33ed7109fd5458b71daf255" kind="variable"><name>n_samples_PW</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1a36d686beb56ec833c1a1cae1175a38b9" kind="variable"><name>n_samples_TAG_BIT</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1ab562655f256da264add28b9b3955fda3" kind="variable"><name>win_index</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1afbf9cac16ce91b69e2be3863f3707b2e" kind="variable"><name>dc_index</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1aeb20590fe751cdc00999164c90eb8d2b" kind="variable"><name>win_length</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1a5abaa2fc41c3dd5320ba841ec30b239d" kind="variable"><name>dc_length</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1aee54e86e1496a40e92b96811fae871db" kind="variable"><name>s_rate</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1a811db7b3ae205169338e1c57e8cfbdba" kind="variable"><name>avg_ampl</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1a598de196dd05cabec8ce33e5640c1e95" kind="variable"><name>num_pulses</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1a50cca8634e7c225bf2909409c8500a92" kind="variable"><name>sample_thresh</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1a412cc9c7de5f587f7e1bffdfc1b7cf4f" kind="variable"><name>win_samples</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1af465fe49b4668fb65c07f36b8e4b0b9c" kind="variable"><name>cw_samples</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1aa600d7dbb2dec419fef83c508682f720" kind="variable"><name>dc_samples</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1a1462e0c3e595df5b56dc7277a089242c" kind="variable"><name>dc_est</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1a40e85ba3e165039e97354a3a0d1db794" kind="variable"><name>signal_state</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1ace52a6e116feab14f5d73bdde03ab78b" kind="function"><name>gate_impl</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1a2c90ad79b4c9459fed456dad06667e36" kind="function"><name>~gate_impl</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1a9436f57f8ab38de5b1d776477885641a" kind="function"><name>forecast</name></member>
+    <member refid="classgr_1_1reader_1_1gate__impl_1af778f711d2a4531b38d3656423975768" kind="function"><name>general_work</name></member>
+  </compound>
+  <compound refid="classgr_1_1reader_1_1reader" kind="class"><name>gr::reader::reader</name>
+    <member refid="classgr_1_1reader_1_1reader_1a40680436129db72814f66ff23ef76de1" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1reader_1_1reader_1a797e62d1f05886871bad26d9e6d1ea19" kind="function"><name>make</name></member>
+    <member refid="classgr_1_1reader_1_1reader_1a595d2720ddcda29d5363ca2dcc2c231d" kind="function"><name>print_results</name></member>
+  </compound>
+  <compound refid="classgr_1_1reader_1_1reader__impl" kind="class"><name>gr::reader::reader_impl</name>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a09a765142e406e3b7e516f3019c5e691" kind="variable"><name>s_rate</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a1e74816ac8ce0d64b4f306f1dbdf864b" kind="variable"><name>d_rate</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a0729ad512a5b03d7a40d04230ea0f384" kind="variable"><name>n_cwquery_s</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1af78eaab9c6fdbffcc3804ac772f10a36" kind="variable"><name>n_cwack_s</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a9c9f29d63b3676c628c2431e4449109d" kind="variable"><name>n_p_down_s</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a6d1e1eec44387966187b14da186bcc23" kind="variable"><name>sample_d</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a2b3d9737f2e95c80d3e011f7614687d1" kind="variable"><name>n_data0_s</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1aa2bb9be9d70b0fdf29444073e7b4bbdd" kind="variable"><name>n_data1_s</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a5bd0689b1349d117dadc2435d810c36c" kind="variable"><name>n_cw_s</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a143b652522eba6a4cd2c4b4d3361de31" kind="variable"><name>n_pw_s</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a664f88377a0dd90f1462bfb4d838943d" kind="variable"><name>n_delim_s</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a4acbf990aced200c6900a610354d1dc2" kind="variable"><name>n_trcal_s</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a9f5b2d99f9e9cff7d64b81ebd0ae852c" kind="variable"><name>data_0</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a056daa144b5ea47ce7332ff91795c433" kind="variable"><name>data_1</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1abc2f63d2a7de55b2b28615c16732a648" kind="variable"><name>cw</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a765fdab3016706cfbe5c4e7fd8bf5a70" kind="variable"><name>cw_ack</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a2cbf545753782b83c38e8888a9313f7f" kind="variable"><name>cw_query</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a08aed72e1012c595cae902eae675d1dc" kind="variable"><name>delim</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a26e409fa8f166513e50845686e99a691" kind="variable"><name>frame_sync</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1aecea1a6fdc59130a721537f578a0cc86" kind="variable"><name>preamble</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a38371829f4589a475abb22c24c8a8701" kind="variable"><name>rtcal</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a6d654deb84c69380ac53f78eda2bb6d6" kind="variable"><name>trcal</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a68293935e0ab5ece5dd5845f0995cdcb" kind="variable"><name>query_bits</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a8805ca8fae158a4057b22cb2790bb920" kind="variable"><name>ack_bits</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1aed81fde692bee86fd1ad76b452e1af00" kind="variable"><name>query_rep</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a48bca52515d22c776e9212e07607ed2e" kind="variable"><name>nak</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a1f2a26559802e26d9618ed73313ad697" kind="variable"><name>query_adjust_bits</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1ac1e1f8dc824ec355ec4102f45c92390a" kind="variable"><name>p_down</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a730c5b08a228e0af725a6015fbdc11f8" kind="variable"><name>q_change</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1ac2785cceec75f791c7cd00ef09072745" kind="function"><name>gen_query_adjust_bits</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a7d4164c351e9458fa14aa27dc257291d" kind="function"><name>crc_append</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1ad4c270b55d99d587df8a0175092de501" kind="function"><name>gen_query_bits</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a4af77c5929cc0360b09f23ee773e00b4" kind="function"><name>gen_ack_bits</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a616a1ad693a432c4137fa7b069e04d48" kind="function"><name>reader_impl</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1aba28ea266f939de54287fce05c007054" kind="function"><name>~reader_impl</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a613dea6948f8af08ef738011b663f45f" kind="function"><name>print_results</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a70c1b5a05751990e4e74e7e8d2cf7da4" kind="function"><name>forecast</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a006cdacc192883f41ede04e73cd203d6" kind="function"><name>general_work</name></member>
+  </compound>
+  <compound refid="structgr_1_1reader_1_1READER__STATE" kind="struct"><name>gr::reader::READER_STATE</name>
+    <member refid="structgr_1_1reader_1_1READER__STATE_1a80532dc58fd9af955857e02b2f0cb9ff" kind="variable"><name>status</name></member>
+    <member refid="structgr_1_1reader_1_1READER__STATE_1abd3ef1d16e012d982f34a00cb5269d91" kind="variable"><name>gen2_logic_status</name></member>
+    <member refid="structgr_1_1reader_1_1READER__STATE_1a0976b5c7eb3a68c954a4050650cec54b" kind="variable"><name>gate_status</name></member>
+    <member refid="structgr_1_1reader_1_1READER__STATE_1acf4850f77bfc3760924c8a75a1cb38a1" kind="variable"><name>decoder_status</name></member>
+    <member refid="structgr_1_1reader_1_1READER__STATE_1aa6e62a06d5a029850841b5596f7b80a3" kind="variable"><name>reader_stats</name></member>
+    <member refid="structgr_1_1reader_1_1READER__STATE_1a9baf85576ecc896d33e5d590b9ee0ef8" kind="variable"><name>magn_squared_samples</name></member>
+    <member refid="structgr_1_1reader_1_1READER__STATE_1a9a9d592ee25330d25093fb7993562e14" kind="variable"><name>n_samples_to_ungate</name></member>
+  </compound>
+  <compound refid="structgr_1_1reader_1_1READER__STATS" kind="struct"><name>gr::reader::READER_STATS</name>
+    <member refid="structgr_1_1reader_1_1READER__STATS_1af8cc609b0536b9af503413c5d1111a96" kind="variable"><name>n_queries_sent</name></member>
+    <member refid="structgr_1_1reader_1_1READER__STATS_1a3aacd7fcb4b477fbfdb99867625ef212" kind="variable"><name>cur_inventory_round</name></member>
+    <member refid="structgr_1_1reader_1_1READER__STATS_1a5a663b59dce0052dfdb7c32333841b85" kind="variable"><name>cur_slot_number</name></member>
+    <member refid="structgr_1_1reader_1_1READER__STATS_1a6d8fd75d0f1986f0595c3740afa06a13" kind="variable"><name>max_slot_number</name></member>
+    <member refid="structgr_1_1reader_1_1READER__STATS_1a38576a737d21eefea1681d6b4cf521b7" kind="variable"><name>max_inventory_round</name></member>
+    <member refid="structgr_1_1reader_1_1READER__STATS_1a4b0bd74427ec269cc600b4b3952b7797" kind="variable"><name>n_epc_correct</name></member>
+    <member refid="structgr_1_1reader_1_1READER__STATS_1a05b0251d54bfef9664de748f3d20bb91" kind="variable"><name>unique_tags_round</name></member>
+    <member refid="structgr_1_1reader_1_1READER__STATS_1ae702a0d498beb18bd90e48616830027a" kind="variable"><name>tag_reads</name></member>
+    <member refid="structgr_1_1reader_1_1READER__STATS_1af8c73bb683de6cdb76976c0adf44cca1" kind="variable"><name>end</name></member>
+  </compound>
+  <compound refid="classgr_1_1reader_1_1tag__decoder" kind="class"><name>gr::reader::tag_decoder</name>
+    <member refid="classgr_1_1reader_1_1tag__decoder_1adc1be4b403b0369aa76e7558a147adfb" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1reader_1_1tag__decoder_1a515e5d316d1b18ad57e8abc2b7b9d365" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1reader_1_1tag__decoder__impl" kind="class"><name>gr::reader::tag_decoder_impl</name>
+    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a94d9834926957fde2bd7a1935351acc8" kind="variable"><name>n_samples_TAG_BIT</name></member>
+    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a735981858b135d285abf52c677410d81" kind="variable"><name>s_rate</name></member>
+    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1ab68e715e224971c1c41dfa258b8fcdfd" kind="variable"><name>pulse_bit</name></member>
+    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a290a06190003523a0d012c749572015b" kind="variable"><name>T_global</name></member>
+    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1ab2dd9763600592c24b1614607bde0b3b" kind="variable"><name>h_est</name></member>
+    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1abcdaa0fe5f6b03e80bb872473c9a6b89" kind="variable"><name>char_bits</name></member>
+    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1afbca126385f52ba37d03d66564e93880" kind="function"><name>tag_detection_EPC</name></member>
+    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a9c412e30e14fa279a29cf52522d18269" kind="function"><name>tag_detection_RN16</name></member>
+    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a1ea6225d398ba216aaa5d0cb9d1a2040" kind="function"><name>tag_sync</name></member>
+    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1afc36b0150f4f7c696dba8840e12ed5a7" kind="function"><name>check_crc</name></member>
+    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a81ddb2c13f75a046a57a1ca931ebe082" kind="function"><name>tag_decoder_impl</name></member>
+    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a80407ff9f2acdd97cf791d84ab7c0d25" kind="function"><name>~tag_decoder_impl</name></member>
+    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1ab1de0f047a3e4877ae729a95a802b4d3" kind="function"><name>forecast</name></member>
+    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a7744a26e411f8ad3ab9838468ffe37eb" kind="function"><name>general_work</name></member>
+  </compound>
+  <compound refid="namespacegr" kind="namespace"><name>gr</name>
+  </compound>
+  <compound refid="namespacegr_1_1reader" kind="namespace"><name>gr::reader</name>
+    <member refid="namespacegr_1_1reader_1aa6ddba31062f1855baea426adf9d04b3" kind="enum"><name>STATUS</name></member>
+    <member refid="namespacegr_1_1reader_1aa6ddba31062f1855baea426adf9d04b3ade78b304b92222a84e3d1e9cf7993fec" kind="enumvalue"><name>RUNNING</name></member>
+    <member refid="namespacegr_1_1reader_1aa6ddba31062f1855baea426adf9d04b3a354f4ca7ede5fedcb69bdd513c047360" kind="enumvalue"><name>TERMINATED</name></member>
+    <member refid="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84e" kind="enum"><name>GEN2_LOGIC_STATUS</name></member>
+    <member refid="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84ead4606eae53dc8474770f7523a85e5a53" kind="enumvalue"><name>SEND_QUERY</name></member>
+    <member refid="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84ea3200fe1bb7622caf96573fcb59662cc1" kind="enumvalue"><name>SEND_ACK</name></member>
+    <member refid="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84ea7e28c8fcac21b476b7a98471de57deb3" kind="enumvalue"><name>SEND_QUERY_REP</name></member>
+    <member refid="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84ea524761f415ab17aaf6efd6002287e8fc" kind="enumvalue"><name>IDLE</name></member>
+    <member refid="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84ea1c1f45eb60f9043687e9d786bff7c2ac" kind="enumvalue"><name>SEND_CW</name></member>
+    <member refid="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84ea59fa2b8a9729f1f5e3d6a52df0308565" kind="enumvalue"><name>START</name></member>
+    <member refid="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84eaf7edbce57d728a0cb49d7a5f79a60b6b" kind="enumvalue"><name>SEND_QUERY_ADJUST</name></member>
+    <member refid="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84eac1722ca6014c0bfef0208f555a25a075" kind="enumvalue"><name>SEND_NAK_QR</name></member>
+    <member refid="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84ea73f68ec46364ce4dafbd2ffb1f475951" kind="enumvalue"><name>SEND_NAK_Q</name></member>
+    <member refid="namespacegr_1_1reader_1aa93ad935c8263d46838aa697da1dd84eafdeab2ead1ba4a7edc38d5a2f388bbb6" kind="enumvalue"><name>POWER_DOWN</name></member>
+    <member refid="namespacegr_1_1reader_1ac8c38c3c6822cfad5cd4fb05c30927ac" kind="enum"><name>GATE_STATUS</name></member>
+    <member refid="namespacegr_1_1reader_1ac8c38c3c6822cfad5cd4fb05c30927acaa2619ff99f2b792558291329378fd984" kind="enumvalue"><name>GATE_OPEN</name></member>
+    <member refid="namespacegr_1_1reader_1ac8c38c3c6822cfad5cd4fb05c30927aca1f67eb0be6b3cfddf30325b058058e93" kind="enumvalue"><name>GATE_CLOSED</name></member>
+    <member refid="namespacegr_1_1reader_1ac8c38c3c6822cfad5cd4fb05c30927acae82c6970dc98ed62e26dde670fa0c03d" kind="enumvalue"><name>GATE_SEEK_RN16</name></member>
+    <member refid="namespacegr_1_1reader_1ac8c38c3c6822cfad5cd4fb05c30927aca689f51eb145050d83b38a16b254e156f" kind="enumvalue"><name>GATE_SEEK_EPC</name></member>
+    <member refid="namespacegr_1_1reader_1ac8c38c3c6822cfad5cd4fb05c30927aca30c96dd14653ce3600d5851f04fc6149" kind="enumvalue"><name>GATE_Handle</name></member>
+    <member refid="namespacegr_1_1reader_1a58e34f0b1b6ddfccb60d341182cd422a" kind="enum"><name>DECODER_STATUS</name></member>
+    <member refid="namespacegr_1_1reader_1a58e34f0b1b6ddfccb60d341182cd422aa149ce4b3391283cf3c7fa4cd1f08341e" kind="enumvalue"><name>DECODER_DECODE_RN16</name></member>
+    <member refid="namespacegr_1_1reader_1a58e34f0b1b6ddfccb60d341182cd422aa085fd93afeefa2255973977eef73d067" kind="enumvalue"><name>DECODER_DECODE_EPC</name></member>
+    <member refid="namespacegr_1_1reader_1a3d4e65eaba5ca47419bf1b7b9fbaef58" kind="variable"><name>FIXED_Q</name></member>
+    <member refid="namespacegr_1_1reader_1a0e9558f84cc0aebd9e86511a235fb32b" kind="variable"><name>MAX_NUM_QUERIES</name></member>
+    <member refid="namespacegr_1_1reader_1acb973189861ad815cb9fa138776da18a" kind="variable"><name>Q_VALUE</name></member>
+    <member refid="namespacegr_1_1reader_1a9f95b9e1c5a79738ea1d180366bcf036" kind="variable"><name>P_DOWN</name></member>
+    <member refid="namespacegr_1_1reader_1a963b68ab3ccb8b7736afd1a0a83237a1" kind="variable"><name>CW_D</name></member>
+    <member refid="namespacegr_1_1reader_1affb029fac8c161552088de74243bbb15" kind="variable"><name>P_DOWN_D</name></member>
+    <member refid="namespacegr_1_1reader_1a665f2af132101acac0dc9dd33aadc075" kind="variable"><name>T1_D</name></member>
+    <member refid="namespacegr_1_1reader_1af992c8d578d0dd8baeecf2dffeacedb2" kind="variable"><name>T2_D</name></member>
+    <member refid="namespacegr_1_1reader_1a3108c38023771ecbd7420eacda741bd7" kind="variable"><name>PW_D</name></member>
+    <member refid="namespacegr_1_1reader_1a40e09ca1792d9b7cfdece7034f375278" kind="variable"><name>DELIM_D</name></member>
+    <member refid="namespacegr_1_1reader_1a34d802dc8e1218c6e24d30af5814bdb6" kind="variable"><name>TRCAL_D</name></member>
+    <member refid="namespacegr_1_1reader_1adf1cc67e793b1ad4a36e0cedbad8b447" kind="variable"><name>RTCAL_D</name></member>
+    <member refid="namespacegr_1_1reader_1a779408e3199a3d710fc2d68b9b24db20" kind="variable"><name>NUM_PULSES_COMMAND</name></member>
+    <member refid="namespacegr_1_1reader_1a9ce1cacf1aebfb39e3d17d65ca54559b" kind="variable"><name>NUMBER_UNIQUE_TAGS</name></member>
+    <member refid="namespacegr_1_1reader_1af00018c2ad382f2f130e4365b40f1f04" kind="variable"><name>THRESH_FRACTION</name></member>
+    <member refid="namespacegr_1_1reader_1a0be346a85580d11e8e1f7cd3aa1ea060" kind="variable"><name>WIN_SIZE_D</name></member>
+    <member refid="namespacegr_1_1reader_1ac5642ec46cf581dd8730688ee218f53e" kind="variable"><name>PILOT_TONE</name></member>
+    <member refid="namespacegr_1_1reader_1aefd739ea52f67d6f3008515c47932e23" kind="variable"><name>TAG_PREAMBLE_BITS</name></member>
+    <member refid="namespacegr_1_1reader_1a946ebbf7bf2baedf8b7b1a754b3f653f" kind="variable"><name>RN16_BITS</name></member>
+    <member refid="namespacegr_1_1reader_1a579a1b098a1103b5352b75168c786690" kind="variable"><name>EPC_BITS</name></member>
+    <member refid="namespacegr_1_1reader_1ae312204e98b03abde617969356e6f61c" kind="variable"><name>QUERY_LENGTH</name></member>
+    <member refid="namespacegr_1_1reader_1a5f8b768586c2f909e356e8404c88c6a9" kind="variable"><name>T_READER_FREQ</name></member>
+    <member refid="namespacegr_1_1reader_1a96363df08e78dc538e968dfab323af0f" kind="variable"><name>TAG_BIT_D</name></member>
+    <member refid="namespacegr_1_1reader_1abcb47c666b27a289264e6280375b1fe4" kind="variable"><name>RN16_D</name></member>
+    <member refid="namespacegr_1_1reader_1ae93c0a583d4824278d206934a000a34e" kind="variable"><name>EPC_D</name></member>
+    <member refid="namespacegr_1_1reader_1a3d0be86e8592605b69fdc1b6076cd45d" kind="variable"><name>QUERY_CODE</name></member>
+    <member refid="namespacegr_1_1reader_1a72aabe10c596f0c90287a5f6836779ae" kind="variable"><name>M</name></member>
+    <member refid="namespacegr_1_1reader_1a81a9146ca716f48013a53acffe78d0e2" kind="variable"><name>SEL</name></member>
+    <member refid="namespacegr_1_1reader_1a1186382b91eef26b3b53f93435772313" kind="variable"><name>SESSION</name></member>
+    <member refid="namespacegr_1_1reader_1a227287d9144757a5437f3cb8fc362b2d" kind="variable"><name>TARGET</name></member>
+    <member refid="namespacegr_1_1reader_1ad07b1f04a76ec416c21381a92fe06f78" kind="variable"><name>TREXT</name></member>
+    <member refid="namespacegr_1_1reader_1a0b40513b4a0679944bb2e53adc916506" kind="variable"><name>DR</name></member>
+    <member refid="namespacegr_1_1reader_1a2eb24f673d45b8e006750660a5f52cec" kind="variable"><name>NAK_CODE</name></member>
+    <member refid="namespacegr_1_1reader_1a7654c26c390b2f98b08348fd22676849" kind="variable"><name>ACK_CODE</name></member>
+    <member refid="namespacegr_1_1reader_1a73e0251f386a85f70419ed7f33c2a84b" kind="variable"><name>QADJ_CODE</name></member>
+    <member refid="namespacegr_1_1reader_1a4f80d76770de9068be7e20f03584177b" kind="variable"><name>Q_UPDN</name></member>
+    <member refid="namespacegr_1_1reader_1a23ffe063c42951c544075a6751a4784b" kind="variable"><name>TAG_PREAMBLE</name></member>
+    <member refid="namespacegr_1_1reader_1ad882dfb3fb6bb2ec3740b1b4941babc5" kind="variable"><name>DC_SIZE_D</name></member>
+    <member refid="namespacegr_1_1reader_1add9602133c95dfbf05f3432d16cb5a15" kind="variable"><name>reader_state</name></member>
+    <member refid="namespacegr_1_1reader_1a0814509f13ec6fcfca7959c253a01e3f" kind="function"><name>initialize_reader_state</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="api_8h" kind="file"><name>api.h</name>
+    <member refid="api_8h_1ad3462ec4b6ceb6ecea667b8d2858c756" kind="define"><name>READER_API</name></member>
+  </compound>
+  <compound refid="gate_8h" kind="file"><name>gate.h</name>
+  </compound>
+  <compound refid="gate__impl_8h" kind="file"><name>gate_impl.h</name>
+  </compound>
+  <compound refid="gate__pydoc__template_8h" kind="file"><name>gate_pydoc_template.h</name>
+    <member refid="gate__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="gate__pydoc__template_8h_1a7df09f820b16526f5fea326739e6c874" kind="variable"><name>__doc_gr_reader_gate</name></member>
+    <member refid="gate__pydoc__template_8h_1aa384f064803145d66f4f1098421f39ba" kind="variable"><name>__doc_gr_reader_gate_gate</name></member>
+    <member refid="gate__pydoc__template_8h_1a91200c1ecab48071ee8f3717ea6fef82" kind="variable"><name>__doc_gr_reader_gate_make</name></member>
+  </compound>
+  <compound refid="global__vars_8h" kind="file"><name>global_vars.h</name>
+  </compound>
+  <compound refid="global__vars__pydoc__template_8h" kind="file"><name>global_vars_pydoc_template.h</name>
+    <member refid="global__vars__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="global__vars__pydoc__template_8h_1aeb271db68e68f7b026ab756a68e1122c" kind="variable"><name>__doc_gr_reader_READER_STATS</name></member>
+    <member refid="global__vars__pydoc__template_8h_1a91869b8b29f7cca6e16c023e453d37ed" kind="variable"><name>__doc_gr_reader_READER_STATS_READER_STATS_0</name></member>
+    <member refid="global__vars__pydoc__template_8h_1a06a02e6329ed41d143dcf2f4de4d7cbc" kind="variable"><name>__doc_gr_reader_READER_STATS_READER_STATS_1</name></member>
+    <member refid="global__vars__pydoc__template_8h_1a5f709da791f16ee314002b2a8b963431" kind="variable"><name>__doc_gr_reader_READER_STATE</name></member>
+    <member refid="global__vars__pydoc__template_8h_1a0a0ccb18ccef61bc46c659422a17dfe6" kind="variable"><name>__doc_gr_reader_READER_STATE_READER_STATE_0</name></member>
+    <member refid="global__vars__pydoc__template_8h_1abd8f28d6933662a28c61a5b2c19bb801" kind="variable"><name>__doc_gr_reader_READER_STATE_READER_STATE_1</name></member>
+    <member refid="global__vars__pydoc__template_8h_1ac3c8ada6717924d93cf8b63ac6dcae01" kind="variable"><name>__doc_gr_reader_initialize_reader_state</name></member>
+  </compound>
+  <compound refid="group__defs_8dox" kind="file"><name>group_defs.dox</name>
+  </compound>
+  <compound refid="main__page_8dox" kind="file"><name>main_page.dox</name>
+  </compound>
+  <compound refid="build_2python_2reader_2bindings_2pydoc__macros_8h" kind="file"><name>build/python/reader/bindings/pydoc_macros.h</name>
+    <member refid="build_2python_2reader_2bindings_2pydoc__macros_8h_1afa7cf06549cf7fd295f622ef6f376357" kind="define"><name>__EXPAND</name></member>
+    <member refid="build_2python_2reader_2bindings_2pydoc__macros_8h_1a251b23a2efed48ff2ba2d6f449ed33a3" kind="define"><name>__COUNT</name></member>
+    <member refid="build_2python_2reader_2bindings_2pydoc__macros_8h_1a2815f7ab197591ba9559415c694f9ce0" kind="define"><name>__VA_SIZE</name></member>
+    <member refid="build_2python_2reader_2bindings_2pydoc__macros_8h_1afdd58e017733f2235c227ef8dd3b2de8" kind="define"><name>__CAT1</name></member>
+    <member refid="build_2python_2reader_2bindings_2pydoc__macros_8h_1af08fe30f2a41cef10658f6a892d20543" kind="define"><name>__CAT2</name></member>
+    <member refid="build_2python_2reader_2bindings_2pydoc__macros_8h_1a43c147206df4346db5e9d6445aab28ae" kind="define"><name>__DOC1</name></member>
+    <member refid="build_2python_2reader_2bindings_2pydoc__macros_8h_1a53738db606593bc1554371d718695fed" kind="define"><name>__DOC2</name></member>
+    <member refid="build_2python_2reader_2bindings_2pydoc__macros_8h_1a21baf08c04d32485764f227c32b5bf5d" kind="define"><name>__DOC3</name></member>
+    <member refid="build_2python_2reader_2bindings_2pydoc__macros_8h_1a9463ba0ad86bcb4c59b5aecf8a37174c" kind="define"><name>__DOC4</name></member>
+    <member refid="build_2python_2reader_2bindings_2pydoc__macros_8h_1a942579d548421ddb2906af7094e5789c" kind="define"><name>__DOC5</name></member>
+    <member refid="build_2python_2reader_2bindings_2pydoc__macros_8h_1a31ea356761360e78d16525aa69d2dae6" kind="define"><name>__DOC6</name></member>
+    <member refid="build_2python_2reader_2bindings_2pydoc__macros_8h_1a6f1e731f1c6d2893ff1bf98582a7de6e" kind="define"><name>__DOC7</name></member>
+    <member refid="build_2python_2reader_2bindings_2pydoc__macros_8h_1a4e578031ec998eaeb933d5caa6a7d28a" kind="define"><name>DOC</name></member>
+  </compound>
+  <compound refid="docs_2doxygen_2pydoc__macros_8h" kind="file"><name>docs/doxygen/pydoc_macros.h</name>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1afa7cf06549cf7fd295f622ef6f376357" kind="define"><name>__EXPAND</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a251b23a2efed48ff2ba2d6f449ed33a3" kind="define"><name>__COUNT</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a2815f7ab197591ba9559415c694f9ce0" kind="define"><name>__VA_SIZE</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1afdd58e017733f2235c227ef8dd3b2de8" kind="define"><name>__CAT1</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1af08fe30f2a41cef10658f6a892d20543" kind="define"><name>__CAT2</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a43c147206df4346db5e9d6445aab28ae" kind="define"><name>__DOC1</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a53738db606593bc1554371d718695fed" kind="define"><name>__DOC2</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a21baf08c04d32485764f227c32b5bf5d" kind="define"><name>__DOC3</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a9463ba0ad86bcb4c59b5aecf8a37174c" kind="define"><name>__DOC4</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a942579d548421ddb2906af7094e5789c" kind="define"><name>__DOC5</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a31ea356761360e78d16525aa69d2dae6" kind="define"><name>__DOC6</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a6f1e731f1c6d2893ff1bf98582a7de6e" kind="define"><name>__DOC7</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a4e578031ec998eaeb933d5caa6a7d28a" kind="define"><name>DOC</name></member>
+  </compound>
+  <compound refid="reader_8h" kind="file"><name>reader.h</name>
+  </compound>
+  <compound refid="reader__impl_8h" kind="file"><name>reader_impl.h</name>
+  </compound>
+  <compound refid="reader__pydoc__template_8h" kind="file"><name>reader_pydoc_template.h</name>
+    <member refid="reader__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="reader__pydoc__template_8h_1ae5ee75cb51423d5265fe62ae87353d7d" kind="variable"><name>__doc_gr_reader_reader</name></member>
+    <member refid="reader__pydoc__template_8h_1ac0e19b8fe8288c99ae26e53cfee2bd11" kind="variable"><name>__doc_gr_reader_reader_reader_0</name></member>
+    <member refid="reader__pydoc__template_8h_1a9e7ebf62476dbadf2f32bb217bc2f53f" kind="variable"><name>__doc_gr_reader_reader_reader_1</name></member>
+    <member refid="reader__pydoc__template_8h_1af28c172878645cd692900a87eae24186" kind="variable"><name>__doc_gr_reader_reader_make</name></member>
+    <member refid="reader__pydoc__template_8h_1a352ff16a0b79663cce0967cc8b73338a" kind="variable"><name>__doc_gr_reader_reader_print_results</name></member>
+  </compound>
+  <compound refid="tag__decoder_8h" kind="file"><name>tag_decoder.h</name>
+  </compound>
+  <compound refid="tag__decoder__impl_8h" kind="file"><name>tag_decoder_impl.h</name>
+  </compound>
+  <compound refid="tag__decoder__pydoc__template_8h" kind="file"><name>tag_decoder_pydoc_template.h</name>
+    <member refid="tag__decoder__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="tag__decoder__pydoc__template_8h_1afbe7c2f1c5f9c3115c5ee38bc47b4580" kind="variable"><name>__doc_gr_reader_tag_decoder</name></member>
+    <member refid="tag__decoder__pydoc__template_8h_1ae534d9685c8c04d95b9cccee2ab8475f" kind="variable"><name>__doc_gr_reader_tag_decoder_tag_decoder</name></member>
+    <member refid="tag__decoder__pydoc__template_8h_1a4313f36413b6f55326a7d9f20d25e5d0" kind="variable"><name>__doc_gr_reader_tag_decoder_make</name></member>
+  </compound>
+  <compound refid="group__block" kind="group"><name>block</name>
+  </compound>
+  <compound refid="dir_2fe02d8e7181026e3b57043e4923d631" kind="dir"><name>bindings</name>
+  </compound>
+  <compound refid="dir_2065341f93cdcd1f4000eba7cb95d22e" kind="dir"><name>bindings</name>
+  </compound>
+  <compound refid="dir_49e56c817e5e54854c35e136979f97ca" kind="dir"><name>docs</name>
+  </compound>
+  <compound refid="dir_79d40bcd60d29422fc88cb5c522cd3f7" kind="dir"><name>docstrings</name>
+  </compound>
+  <compound refid="dir_359d2bec989c9a8deeeb9aee335c1c76" kind="dir"><name>doxygen</name>
+  </compound>
+  <compound refid="dir_902d6fe55786be073ae6681293cdb979" kind="dir"><name>gnuradio</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>lib</name>
+  </compound>
+  <compound refid="dir_f2cd86917185299abf5a1f0679072f3c" kind="dir"><name>other</name>
+  </compound>
+  <compound refid="dir_7837fde3ab9c1fb2fc5be7b717af8d79" kind="dir"><name>python</name>
+  </compound>
+  <compound refid="dir_ab3dd591509f89c87d6a9fd8136a6d03" kind="dir"><name>python</name>
+  </compound>
+  <compound refid="dir_7d400941dcf0ad27e3a613c8702ca616" kind="dir"><name>reader</name>
+  </compound>
+  <compound refid="dir_984c3dc6111be9a240996d9d415f7bc8" kind="dir"><name>reader</name>
+  </compound>
+  <compound refid="dir_8a0fbfd3e9321a48a71b43a3ba19c1b2" kind="dir"><name>reader</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,40 @@
+id: reader_reader
+label: reader
+category: '[reader]'
+
+templates:
+  imports: from gnuradio import reader
+  make: reader.reader(${sample_rate}, ${dac_rate})
+
+#  Make one 'parameters' list entry for every parameter you want settable from the GUI.
+#     Keys include:
+#     * id (makes the value accessible as keyname, e.g. in the make entry)
+#     * label (label shown in the GUI)
+#     * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
+#     * default
+parameters:
+- id: sample_rate
+  label: sample_rate
+  dtype: float
+  default: 25e6
+- id: dac_rate
+  label: dac_rate
+  dtype: float
+  default: 25e6
+
+inputs:
+- label: bits
+  domain: stream
+  dtype: float
+
+outputs:
+- label: tx
+  domain: stream
+  dtype: float
+
+documentation: |-
+  Gen2 Reader waveform generator (TX-side).
+  - Input (optional): RN16 bits from tag_decoder, used to build ACK.
+  - Output: TX baseband amplitude sequence (float) representing PIE/ASK waveform.
+
+file_format: 1

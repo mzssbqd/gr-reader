@@ -1,0 +1,407 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classgr_1_1reader_1_1gate__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::reader::gate_impl</compoundname>
+    <basecompoundref refid="classgr_1_1reader_1_1gate" prot="public" virt="non-virtual">gr::reader::gate</basecompoundref>
+    <includes refid="gate__impl_8h" local="no">gate_impl.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classgr_1_1reader_1_1gate__impl_1a5d95ea6da78e200d9dce3fddf5772a00" prot="private" static="no" strong="no">
+        <type></type>
+        <name>SIGNAL_STATE</name>
+        <enumvalue id="classgr_1_1reader_1_1gate__impl_1a5d95ea6da78e200d9dce3fddf5772a00a378fb889f3473db2e356687cf0cf5771" prot="private">
+          <name>NEG_EDGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgr_1_1reader_1_1gate__impl_1a5d95ea6da78e200d9dce3fddf5772a00a8a011ab11305d3cedac2c6b14c93cb42" prot="private">
+          <name>POS_EDGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="21" column="5" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="21" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1reader_1_1gate__impl_1ada37f59fd6fce8712fcfed7a8c839c4d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::reader::gate_impl::n_samples</definition>
+        <argsstring></argsstring>
+        <name>n_samples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="24" column="9" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1gate__impl_1a1ae243017993b09b9656ab4ba21c34e6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::reader::gate_impl::n_samples_T1</definition>
+        <argsstring></argsstring>
+        <name>n_samples_T1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="24" column="19" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1gate__impl_1a39fc7f52e33ed7109fd5458b71daf255" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::reader::gate_impl::n_samples_PW</definition>
+        <argsstring></argsstring>
+        <name>n_samples_PW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="24" column="32" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1gate__impl_1a36d686beb56ec833c1a1cae1175a38b9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::reader::gate_impl::n_samples_TAG_BIT</definition>
+        <argsstring></argsstring>
+        <name>n_samples_TAG_BIT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="24" column="45" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1gate__impl_1ab562655f256da264add28b9b3955fda3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::reader::gate_impl::win_index</definition>
+        <argsstring></argsstring>
+        <name>win_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="27" column="9" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1gate__impl_1afbf9cac16ce91b69e2be3863f3707b2e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::reader::gate_impl::dc_index</definition>
+        <argsstring></argsstring>
+        <name>dc_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="27" column="19" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1gate__impl_1aeb20590fe751cdc00999164c90eb8d2b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::reader::gate_impl::win_length</definition>
+        <argsstring></argsstring>
+        <name>win_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="27" column="28" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1gate__impl_1a5abaa2fc41c3dd5320ba841ec30b239d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::reader::gate_impl::dc_length</definition>
+        <argsstring></argsstring>
+        <name>dc_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="27" column="39" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1gate__impl_1aee54e86e1496a40e92b96811fae871db" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::reader::gate_impl::s_rate</definition>
+        <argsstring></argsstring>
+        <name>s_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="27" column="49" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1gate__impl_1a811db7b3ae205169338e1c57e8cfbdba" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::reader::gate_impl::avg_ampl</definition>
+        <argsstring></argsstring>
+        <name>avg_ampl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="30" column="11" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1gate__impl_1a598de196dd05cabec8ce33e5640c1e95" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::reader::gate_impl::num_pulses</definition>
+        <argsstring></argsstring>
+        <name>num_pulses</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="30" column="20" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1gate__impl_1a50cca8634e7c225bf2909409c8500a92" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::reader::gate_impl::sample_thresh</definition>
+        <argsstring></argsstring>
+        <name>sample_thresh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="30" column="31" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1gate__impl_1a412cc9c7de5f587f7e1bffdfc1b7cf4f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gr::reader::gate_impl::win_samples</definition>
+        <argsstring></argsstring>
+        <name>win_samples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="33" column="17" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1gate__impl_1af465fe49b4668fb65c07f36b8e4b0b9c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gr::reader::gate_impl::cw_samples</definition>
+        <argsstring></argsstring>
+        <name>cw_samples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="33" column="29" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1gate__impl_1aa600d7dbb2dec419fef83c508682f720" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr::reader::gate_impl::dc_samples</definition>
+        <argsstring></argsstring>
+        <name>dc_samples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="34" column="17" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1gate__impl_1a1462e0c3e595df5b56dc7277a089242c" prot="private" static="no" mutable="no">
+        <type>gr_complex</type>
+        <definition>gr_complex gr::reader::gate_impl::dc_est</definition>
+        <argsstring></argsstring>
+        <name>dc_est</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="35" column="16" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1gate__impl_1a40e85ba3e165039e97354a3a0d1db794" prot="private" static="no" mutable="no">
+        <type>SIGNAL_STATE</type>
+        <definition>SIGNAL_STATE gr::reader::gate_impl::signal_state</definition>
+        <argsstring></argsstring>
+        <name>signal_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="37" column="18" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1reader_1_1gate__impl_1ace52a6e116feab14f5d73bdde03ab78b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::reader::gate_impl::gate_impl</definition>
+        <argsstring>(int sample_rate)</argsstring>
+        <name>gate_impl</name>
+        <param>
+          <type>int</type>
+          <declname>sample_rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="41" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1reader_1_1gate__impl_1a2c90ad79b4c9459fed456dad06667e36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::reader::gate_impl::~gate_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~gate_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="42" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1reader_1_1gate__impl_1a9436f57f8ab38de5b1d776477885641a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::reader::gate_impl::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="45" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1reader_1_1gate__impl_1af778f711d2a4531b38d3656423975768" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::reader::gate_impl::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="47" column="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>gr::reader::gate</label>
+        <link refid="classgr_1_1reader_1_1gate"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::block</label>
+      </node>
+      <node id="1">
+        <label>gr::reader::gate_impl</label>
+        <link refid="classgr_1_1reader_1_1gate__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>gr::reader::gate</label>
+        <link refid="classgr_1_1reader_1_1gate"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::block</label>
+      </node>
+      <node id="1">
+        <label>gr::reader::gate_impl</label>
+        <link refid="classgr_1_1reader_1_1gate__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" line="17" column="1" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/gate_impl.h" bodystart="18" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classgr_1_1reader_1_1gate__impl_1a811db7b3ae205169338e1c57e8cfbdba" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>avg_ampl</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1af465fe49b4668fb65c07f36b8e4b0b9c" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>cw_samples</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1a1462e0c3e595df5b56dc7277a089242c" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>dc_est</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1afbf9cac16ce91b69e2be3863f3707b2e" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>dc_index</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1a5abaa2fc41c3dd5320ba841ec30b239d" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>dc_length</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1aa600d7dbb2dec419fef83c508682f720" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>dc_samples</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1a9436f57f8ab38de5b1d776477885641a" prot="public" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>forecast</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1ace52a6e116feab14f5d73bdde03ab78b" prot="public" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>gate_impl</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1af778f711d2a4531b38d3656423975768" prot="public" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>general_work</name></member>
+      <member refid="classgr_1_1reader_1_1gate_1acf3f5c1800a1f049531fcd171e5eb54e" prot="public" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1ada37f59fd6fce8712fcfed7a8c839c4d" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>n_samples</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1a39fc7f52e33ed7109fd5458b71daf255" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>n_samples_PW</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1a1ae243017993b09b9656ab4ba21c34e6" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>n_samples_T1</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1a36d686beb56ec833c1a1cae1175a38b9" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>n_samples_TAG_BIT</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1a5d95ea6da78e200d9dce3fddf5772a00a378fb889f3473db2e356687cf0cf5771" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>NEG_EDGE</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1a598de196dd05cabec8ce33e5640c1e95" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>num_pulses</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1a5d95ea6da78e200d9dce3fddf5772a00a8a011ab11305d3cedac2c6b14c93cb42" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>POS_EDGE</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1aee54e86e1496a40e92b96811fae871db" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>s_rate</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1a50cca8634e7c225bf2909409c8500a92" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>sample_thresh</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1a40e85ba3e165039e97354a3a0d1db794" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>signal_state</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1a5d95ea6da78e200d9dce3fddf5772a00" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>SIGNAL_STATE</name></member>
+      <member refid="classgr_1_1reader_1_1gate_1a457eec6a4a8e06ac3d1ff0b1efe466de" prot="public" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1ab562655f256da264add28b9b3955fda3" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>win_index</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1aeb20590fe751cdc00999164c90eb8d2b" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>win_length</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1a412cc9c7de5f587f7e1bffdfc1b7cf4f" prot="private" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>win_samples</name></member>
+      <member refid="classgr_1_1reader_1_1gate__impl_1a2c90ad79b4c9459fed456dad06667e36" prot="public" virt="non-virtual"><scope>gr::reader::gate_impl</scope><name>~gate_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classgr_1_1reader_1_1tag__decoder__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::reader::tag_decoder_impl</compoundname>
+    <basecompoundref refid="classgr_1_1reader_1_1tag__decoder" prot="public" virt="non-virtual">gr::reader::tag_decoder</basecompoundref>
+    <includes refid="tag__decoder__impl_8h" local="no">tag_decoder_impl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1reader_1_1tag__decoder__impl_1a94d9834926957fde2bd7a1935351acc8" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::reader::tag_decoder_impl::n_samples_TAG_BIT</definition>
+        <argsstring></argsstring>
+        <name>n_samples_TAG_BIT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" line="20" column="11" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1tag__decoder__impl_1a735981858b135d285abf52c677410d81" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::reader::tag_decoder_impl::s_rate</definition>
+        <argsstring></argsstring>
+        <name>s_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" line="21" column="9" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1tag__decoder__impl_1ab68e715e224971c1c41dfa258b8fcdfd" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gr::reader::tag_decoder_impl::pulse_bit</definition>
+        <argsstring></argsstring>
+        <name>pulse_bit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" line="22" column="17" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1tag__decoder__impl_1a290a06190003523a0d012c749572015b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::reader::tag_decoder_impl::T_global</definition>
+        <argsstring></argsstring>
+        <name>T_global</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" line="23" column="11" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1tag__decoder__impl_1ab2dd9763600592c24b1614607bde0b3b" prot="private" static="no" mutable="no">
+        <type>gr_complex</type>
+        <definition>gr_complex gr::reader::tag_decoder_impl::h_est</definition>
+        <argsstring></argsstring>
+        <name>h_est</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" line="24" column="16" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1reader_1_1tag__decoder__impl_1abcdaa0fe5f6b03e80bb872473c9a6b89" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* gr::reader::tag_decoder_impl::char_bits</definition>
+        <argsstring></argsstring>
+        <name>char_bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" line="25" column="10" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr_1_1reader_1_1tag__decoder__impl_1afbca126385f52ba37d03d66564e93880" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gr::reader::tag_decoder_impl::tag_detection_EPC</definition>
+        <argsstring>(std::vector&lt; gr_complex &gt; &amp;EPC_samples_complex, int index)</argsstring>
+        <name>tag_detection_EPC</name>
+        <param>
+          <type>std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>EPC_samples_complex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" line="27" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1reader_1_1tag__decoder__impl_1a9c412e30e14fa279a29cf52522d18269" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gr::reader::tag_decoder_impl::tag_detection_RN16</definition>
+        <argsstring>(std::vector&lt; gr_complex &gt; &amp;RN16_samples_complex)</argsstring>
+        <name>tag_detection_RN16</name>
+        <param>
+          <type>std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>RN16_samples_complex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" line="28" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1reader_1_1tag__decoder__impl_1a1ea6225d398ba216aaa5d0cb9d1a2040" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::reader::tag_decoder_impl::tag_sync</definition>
+        <argsstring>(const gr_complex *in, int size)</argsstring>
+        <name>tag_sync</name>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" line="29" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1reader_1_1tag__decoder__impl_1afc36b0150f4f7c696dba8840e12ed5a7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::reader::tag_decoder_impl::check_crc</definition>
+        <argsstring>(char *bits, int num_bits)</argsstring>
+        <name>check_crc</name>
+        <param>
+          <type>char *</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num_bits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" line="30" column="9"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1reader_1_1tag__decoder__impl_1a81ddb2c13f75a046a57a1ca931ebe082" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::reader::tag_decoder_impl::tag_decoder_impl</definition>
+        <argsstring>(int sample_rate, std::vector&lt; int &gt; output_sizes)</argsstring>
+        <name>tag_decoder_impl</name>
+        <param>
+          <type>int</type>
+          <declname>sample_rate</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>output_sizes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" line="34" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1reader_1_1tag__decoder__impl_1a80407ff9f2acdd97cf791d84ab7c0d25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::reader::tag_decoder_impl::~tag_decoder_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~tag_decoder_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1reader_1_1tag__decoder__impl_1ab1de0f047a3e4877ae729a95a802b4d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::reader::tag_decoder_impl::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" line="38" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1reader_1_1tag__decoder__impl_1a7744a26e411f8ad3ab9838468ffe37eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::reader::tag_decoder_impl::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" line="40" column="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>gr::reader::tag_decoder</label>
+        <link refid="classgr_1_1reader_1_1tag__decoder"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::reader::tag_decoder_impl</label>
+        <link refid="classgr_1_1reader_1_1tag__decoder__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>gr::reader::tag_decoder</label>
+        <link refid="classgr_1_1reader_1_1tag__decoder"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::reader::tag_decoder_impl</label>
+        <link refid="classgr_1_1reader_1_1tag__decoder__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" line="17" column="1" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/tag_decoder_impl.h" bodystart="18" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classgr_1_1reader_1_1tag__decoder__impl_1abcdaa0fe5f6b03e80bb872473c9a6b89" prot="private" virt="non-virtual"><scope>gr::reader::tag_decoder_impl</scope><name>char_bits</name></member>
+      <member refid="classgr_1_1reader_1_1tag__decoder__impl_1afc36b0150f4f7c696dba8840e12ed5a7" prot="private" virt="non-virtual"><scope>gr::reader::tag_decoder_impl</scope><name>check_crc</name></member>
+      <member refid="classgr_1_1reader_1_1tag__decoder__impl_1ab1de0f047a3e4877ae729a95a802b4d3" prot="public" virt="non-virtual"><scope>gr::reader::tag_decoder_impl</scope><name>forecast</name></member>
+      <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a7744a26e411f8ad3ab9838468ffe37eb" prot="public" virt="non-virtual"><scope>gr::reader::tag_decoder_impl</scope><name>general_work</name></member>
+      <member refid="classgr_1_1reader_1_1tag__decoder__impl_1ab2dd9763600592c24b1614607bde0b3b" prot="private" virt="non-virtual"><scope>gr::reader::tag_decoder_impl</scope><name>h_est</name></member>
+      <member refid="classgr_1_1reader_1_1tag__decoder_1a515e5d316d1b18ad57e8abc2b7b9d365" prot="public" virt="non-virtual"><scope>gr::reader::tag_decoder_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a94d9834926957fde2bd7a1935351acc8" prot="private" virt="non-virtual"><scope>gr::reader::tag_decoder_impl</scope><name>n_samples_TAG_BIT</name></member>
+      <member refid="classgr_1_1reader_1_1tag__decoder__impl_1ab68e715e224971c1c41dfa258b8fcdfd" prot="private" virt="non-virtual"><scope>gr::reader::tag_decoder_impl</scope><name>pulse_bit</name></member>
+      <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a735981858b135d285abf52c677410d81" prot="private" virt="non-virtual"><scope>gr::reader::tag_decoder_impl</scope><name>s_rate</name></member>
+      <member refid="classgr_1_1reader_1_1tag__decoder_1adc1be4b403b0369aa76e7558a147adfb" prot="public" virt="non-virtual"><scope>gr::reader::tag_decoder_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a290a06190003523a0d012c749572015b" prot="private" virt="non-virtual"><scope>gr::reader::tag_decoder_impl</scope><name>T_global</name></member>
+      <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a81ddb2c13f75a046a57a1ca931ebe082" prot="public" virt="non-virtual"><scope>gr::reader::tag_decoder_impl</scope><name>tag_decoder_impl</name></member>
+      <member refid="classgr_1_1reader_1_1tag__decoder__impl_1afbca126385f52ba37d03d66564e93880" prot="private" virt="non-virtual"><scope>gr::reader::tag_decoder_impl</scope><name>tag_detection_EPC</name></member>
+      <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a9c412e30e14fa279a29cf52522d18269" prot="private" virt="non-virtual"><scope>gr::reader::tag_decoder_impl</scope><name>tag_detection_RN16</name></member>
+      <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a1ea6225d398ba216aaa5d0cb9d1a2040" prot="private" virt="non-virtual"><scope>gr::reader::tag_decoder_impl</scope><name>tag_sync</name></member>
+      <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a80407ff9f2acdd97cf791d84ab7c0d25" prot="public" virt="non-virtual"><scope>gr::reader::tag_decoder_impl</scope><name>~tag_decoder_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

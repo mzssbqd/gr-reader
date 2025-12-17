@@ -108,6 +108,9 @@ reader_impl::reader_impl(float sample_rate, float dac_rate)
     nak.insert( nak.end(), data_0.begin(), data_0.end() );
     nak.insert( nak.end(), data_0.begin(), data_0.end() );
 
+    // init local buffer
+    d_tx_buf.resize(0); d_tx_pos = 0;
+
     gen_query_bits();
     gen_query_adjust_bits();
 
@@ -138,42 +141,58 @@ int reader_impl::general_work(int noutput_items,
     int consumed = 0;
     int written = 0;
 
-    consumed = ninput_items[0];
+    // consumed = ninput_items[0];
+
+    // 将本地缓冲区的数据先输出
+    if (!d_tx_buf.empty()) 
+    {
+        const size_t remain = d_tx_buf.size() - d_tx_pos;
+        const size_t n = std::min(remain, (size_t)noutput_items);
+        std::memcpy(out + written, d_tx_buf.data() + d_tx_pos, n * sizeof(float));
+        d_tx_pos += n;
+        written += n;
+        if (d_tx_pos == d_tx_buf.size()) {
+            d_tx_buf.clear();
+            d_tx_pos = 0;
+        }
+
+        consume_each(0);
+        return written;
+    }
+
+    // 清理缓冲区
+    d_tx_buf.clear();
+    d_tx_pos = 0;
 
     switch (reader_state->gen2_logic_status)
     {
         case START: {
             GR_LOG_INFO(d_debug_logger, "START");
-            memcpy(&out[written], &cw_ack[0], sizeof(float) * cw_ack.size() );
-            written += cw_ack.size();
+            
+            append_vec(d_tx_buf, cw_ack);
             reader_state->gen2_logic_status = SEND_QUERY;
         }
             break;
 
         case POWER_DOWN: {
             GR_LOG_INFO(d_debug_logger, "POWER DOWN");
-            memcpy(&out[written], &p_down[0], sizeof(float) * p_down.size() );
-            written += p_down.size();
+            append_vec(d_tx_buf, p_down);
             reader_state->gen2_logic_status = START;
         }   
             break;
 
         case SEND_NAK_QR: {
             GR_LOG_INFO(d_debug_logger, "SEND NAK");
-            memcpy(&out[written], &nak[0], sizeof(float) * nak.size() );
-            written += nak.size();
-            memcpy(&out[written], &cw[0], sizeof(float) * cw.size() );
-            written+=cw.size();
+            append_vec(d_tx_buf, nak);
+            append_vec(d_tx_buf, cw);
             reader_state->gen2_logic_status = SEND_QUERY_REP;
         }
             break;
 
         case SEND_NAK_Q: {
             GR_LOG_INFO(d_debug_logger, "SEND NAK");
-            memcpy(&out[written], &nak[0], sizeof(float) * nak.size() );
-            written += nak.size();
-            memcpy(&out[written], &cw[0], sizeof(float) * cw.size() );
-            written+=cw.size();
+            append_vec(d_tx_buf, nak);
+            append_vec(d_tx_buf, cw);
             reader_state->gen2_logic_status = SEND_QUERY;
         }
             break;
@@ -189,26 +208,22 @@ int reader_impl::general_work(int noutput_items,
             reader_state->decoder_status = DECODER_DECODE_RN16;
             reader_state->gate_status    = GATE_SEEK_RN16;
 
-            memcpy(&out[written], &preamble[0], sizeof(float) * preamble.size() );
-            written += preamble.size();
+            append_vec(d_tx_buf, preamble);
 
             for(size_t i = 0; i < query_bits.size(); i++)
             {
                 if(query_bits[i] == 1)
                 {
-                    memcpy(&out[written], &data_1[0], sizeof(float) * data_1.size() );
-                    written+=data_1.size();
+                    append_vec(d_tx_buf, data_1);
                 }
                 else
                 {
-                    memcpy(&out[written], &data_0[0], sizeof(float) * data_0.size() );
-                    written+=data_0.size();
+                    append_vec(d_tx_buf, data_0);
                 }
             }
             
             // Send CW for RN16
-            memcpy(&out[written], &cw_query[0], sizeof(float) * cw_query.size() );
-            written+=cw_query.size();
+            append_vec(d_tx_buf, cw_query);
 
             // Return to IDLE
             reader_state->gen2_logic_status = IDLE;
@@ -226,24 +241,18 @@ int reader_impl::general_work(int noutput_items,
 
                 gen_ack_bits(in);
                 
-                GR_LOG_INFO(d_logger, "noutput_items=" + std::to_string(noutput_items)
-                     + " need=" + std::to_string(cw_ack.size()));
-                
                 // Send FrameSync
-                memcpy(&out[written], &frame_sync[0], sizeof(float) * frame_sync.size() );
-                written += frame_sync.size();
+                append_vec(d_tx_buf, frame_sync);
 
                 for(size_t i = 0; i < ack_bits.size(); i++)
                 {
                     if(ack_bits[i] == 1)
                     {
-                        memcpy(&out[written], &data_1[0], sizeof(float) * data_1.size() );
-                        written += data_1.size();
+                        append_vec(d_tx_buf, data_1);
                     }
                     else  
                     {
-                        memcpy(&out[written], &data_0[0], sizeof(float) * data_0.size() );
-                        written += data_0.size();
+                        append_vec(d_tx_buf, data_0);
                     }
                 }
                 
@@ -255,8 +264,7 @@ int reader_impl::general_work(int noutput_items,
 
         case SEND_CW: {
             GR_LOG_INFO(d_debug_logger, "SEND CW");
-            memcpy(&out[written], &cw_ack[0], sizeof(float) * cw_ack.size() );
-            written += cw_ack.size();
+            append_vec(d_tx_buf, cw_ack);
             reader_state->gen2_logic_status = IDLE;      // Return to IDLE
         }
             break;
@@ -270,11 +278,8 @@ int reader_impl::general_work(int noutput_items,
             reader_state->gate_status    = GATE_SEEK_RN16;
             reader_state->reader_stats.n_queries_sent +=1;
 
-            memcpy(&out[written], &query_rep[0], sizeof(float) * query_rep.size() );
-            written += query_rep.size();
-
-            memcpy(&out[written], &cw_query[0], sizeof(float) * cw_query.size());
-            written+=cw_query.size();
+            append_vec(d_tx_buf, query_rep);
+            append_vec(d_tx_buf, cw_query);
 
             reader_state->gen2_logic_status = IDLE;    // Return to IDLE
         }
@@ -287,24 +292,20 @@ int reader_impl::general_work(int noutput_items,
             reader_state->gate_status    = GATE_SEEK_RN16;
             reader_state->reader_stats.n_queries_sent +=1;  
 
-            memcpy(&out[written], &frame_sync[0], sizeof(float) * frame_sync.size() );
-            written += frame_sync.size();
+            append_vec(d_tx_buf, frame_sync);
 
             for(size_t i = 0; i < query_adjust_bits.size(); i++)
             {
-            if(query_adjust_bits[i] == 1)
-            {
-                memcpy(&out[written], &data_1[0], sizeof(float) * data_1.size() );
-                written+=data_1.size();
+                if(query_adjust_bits[i] == 1)
+                {
+                    append_vec(d_tx_buf, data_1);
+                }
+                else
+                {
+                    append_vec(d_tx_buf, data_0);
+                }
             }
-            else
-            {
-                memcpy(&out[written], &data_0[0], sizeof(float) * data_0.size() );
-                written+=data_0.size();
-            }
-            }
-            memcpy(&out[written], &cw_query[0], sizeof(float) * cw_query.size());
-            written+=cw_query.size();
+            append_vec(d_tx_buf, cw_query);
             reader_state->gen2_logic_status = IDLE;    // Return to IDLE
         }
             break;
@@ -314,6 +315,18 @@ int reader_impl::general_work(int noutput_items,
             break;
         }
     
+    // 将本地缓冲区的数据输出
+    size_t to_send = std::min(d_tx_buf.size(), (size_t)noutput_items);
+    if (to_send > 0) {
+        std::memcpy(out + written, d_tx_buf.data(), to_send * sizeof(float));
+        d_tx_pos = to_send;
+        written += to_send;
+        if (d_tx_pos == d_tx_buf.size()) {
+            d_tx_buf.clear();
+            d_tx_pos = 0;
+        }
+    }
+
     consume_each (consumed);
     return  written;
 }

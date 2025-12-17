@@ -1,7 +1,7 @@
 var global__vars_8h =
 [
-    [ "READER_STATS", "structgr_1_1reader_1_1READER__STATS.html", "structgr_1_1reader_1_1READER__STATS" ],
-    [ "READER_STATE", "structgr_1_1reader_1_1READER__STATE.html", "structgr_1_1reader_1_1READER__STATE" ],
+    [ "gr::reader::READER_STATS", "structgr_1_1reader_1_1READER__STATS.html", "structgr_1_1reader_1_1READER__STATS" ],
+    [ "gr::reader::READER_STATE", "structgr_1_1reader_1_1READER__STATE.html", "structgr_1_1reader_1_1READER__STATE" ],
     [ "DECODER_STATUS", "global__vars_8h.html#a58e34f0b1b6ddfccb60d341182cd422a", [
       [ "DECODER_DECODE_RN16", "global__vars_8h.html#a58e34f0b1b6ddfccb60d341182cd422aa149ce4b3391283cf3c7fa4cd1f08341e", null ],
       [ "DECODER_DECODE_EPC", "global__vars_8h.html#a58e34f0b1b6ddfccb60d341182cd422aa085fd93afeefa2255973977eef73d067", null ]

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="indexpage" kind="page">
     <compoundname>index</compoundname>
     <title>GNU Radio&apos;s READER Package</title>
@@ -9,6 +9,6 @@
 <para>Welcome to the GNU Radio READER Block</para>
 <para>This is the intro page for the Doxygen manual generated for the READER block (<ref refid="main__page_8dox" kindref="compound">docs/doxygen/other/main_page.dox</ref>). Edit it to add more detailed documentation about the new GNU Radio modules contained in this project. </para>
     </detaileddescription>
-    <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/docs/doxygen/other/main_page.dox"/>
+    <location file="/home/mzssbqd/gr-reader/docs/doxygen/other/main_page.dox"/>
   </compounddef>
 </doxygen>

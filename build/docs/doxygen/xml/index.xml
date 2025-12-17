@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
   <compound refid="classgr_1_1reader_1_1gate" kind="class"><name>gr::reader::gate</name>
     <member refid="classgr_1_1reader_1_1gate_1a457eec6a4a8e06ac3d1ff0b1efe466de" kind="typedef"><name>sptr</name></member>
     <member refid="classgr_1_1reader_1_1gate_1acf3f5c1800a1f049531fcd171e5eb54e" kind="function"><name>make</name></member>
@@ -106,8 +106,8 @@
     <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a290a06190003523a0d012c749572015b" kind="variable"><name>T_global</name></member>
     <member refid="classgr_1_1reader_1_1tag__decoder__impl_1ab2dd9763600592c24b1614607bde0b3b" kind="variable"><name>h_est</name></member>
     <member refid="classgr_1_1reader_1_1tag__decoder__impl_1abcdaa0fe5f6b03e80bb872473c9a6b89" kind="variable"><name>char_bits</name></member>
-    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1afbca126385f52ba37d03d66564e93880" kind="function"><name>tag_detection_EPC</name></member>
-    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a9c412e30e14fa279a29cf52522d18269" kind="function"><name>tag_detection_RN16</name></member>
+    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a3fd965f31977ac1f3378fce182e88067" kind="function"><name>tag_detection_EPC</name></member>
+    <member refid="classgr_1_1reader_1_1tag__decoder__impl_1ac10e2d0fc7c5d09e7e27897c02bfc2bc" kind="function"><name>tag_detection_RN16</name></member>
     <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a1ea6225d398ba216aaa5d0cb9d1a2040" kind="function"><name>tag_sync</name></member>
     <member refid="classgr_1_1reader_1_1tag__decoder__impl_1afc36b0150f4f7c696dba8840e12ed5a7" kind="function"><name>check_crc</name></member>
     <member refid="classgr_1_1reader_1_1tag__decoder__impl_1a81ddb2c13f75a046a57a1ca931ebe082" kind="function"><name>tag_decoder_impl</name></member>
@@ -184,31 +184,6 @@
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
-  <compound refid="api_8h" kind="file"><name>api.h</name>
-    <member refid="api_8h_1ad3462ec4b6ceb6ecea667b8d2858c756" kind="define"><name>READER_API</name></member>
-  </compound>
-  <compound refid="gate_8h" kind="file"><name>gate.h</name>
-  </compound>
-  <compound refid="gate__impl_8h" kind="file"><name>gate_impl.h</name>
-  </compound>
-  <compound refid="gate__pydoc__template_8h" kind="file"><name>gate_pydoc_template.h</name>
-    <member refid="gate__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
-    <member refid="gate__pydoc__template_8h_1a7df09f820b16526f5fea326739e6c874" kind="variable"><name>__doc_gr_reader_gate</name></member>
-    <member refid="gate__pydoc__template_8h_1aa384f064803145d66f4f1098421f39ba" kind="variable"><name>__doc_gr_reader_gate_gate</name></member>
-    <member refid="gate__pydoc__template_8h_1a91200c1ecab48071ee8f3717ea6fef82" kind="variable"><name>__doc_gr_reader_gate_make</name></member>
-  </compound>
-  <compound refid="global__vars_8h" kind="file"><name>global_vars.h</name>
-  </compound>
-  <compound refid="global__vars__pydoc__template_8h" kind="file"><name>global_vars_pydoc_template.h</name>
-    <member refid="global__vars__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
-    <member refid="global__vars__pydoc__template_8h_1aeb271db68e68f7b026ab756a68e1122c" kind="variable"><name>__doc_gr_reader_READER_STATS</name></member>
-    <member refid="global__vars__pydoc__template_8h_1a91869b8b29f7cca6e16c023e453d37ed" kind="variable"><name>__doc_gr_reader_READER_STATS_READER_STATS_0</name></member>
-    <member refid="global__vars__pydoc__template_8h_1a06a02e6329ed41d143dcf2f4de4d7cbc" kind="variable"><name>__doc_gr_reader_READER_STATS_READER_STATS_1</name></member>
-    <member refid="global__vars__pydoc__template_8h_1a5f709da791f16ee314002b2a8b963431" kind="variable"><name>__doc_gr_reader_READER_STATE</name></member>
-    <member refid="global__vars__pydoc__template_8h_1a0a0ccb18ccef61bc46c659422a17dfe6" kind="variable"><name>__doc_gr_reader_READER_STATE_READER_STATE_0</name></member>
-    <member refid="global__vars__pydoc__template_8h_1abd8f28d6933662a28c61a5b2c19bb801" kind="variable"><name>__doc_gr_reader_READER_STATE_READER_STATE_1</name></member>
-    <member refid="global__vars__pydoc__template_8h_1ac3c8ada6717924d93cf8b63ac6dcae01" kind="variable"><name>__doc_gr_reader_initialize_reader_state</name></member>
-  </compound>
   <compound refid="group__defs_8dox" kind="file"><name>group_defs.dox</name>
   </compound>
   <compound refid="main__page_8dox" kind="file"><name>main_page.dox</name>
@@ -243,9 +218,38 @@
     <member refid="docs_2doxygen_2pydoc__macros_8h_1a6f1e731f1c6d2893ff1bf98582a7de6e" kind="define"><name>__DOC7</name></member>
     <member refid="docs_2doxygen_2pydoc__macros_8h_1a4e578031ec998eaeb933d5caa6a7d28a" kind="define"><name>DOC</name></member>
   </compound>
+  <compound refid="api_8h" kind="file"><name>api.h</name>
+    <member refid="api_8h_1ad3462ec4b6ceb6ecea667b8d2858c756" kind="define"><name>READER_API</name></member>
+  </compound>
+  <compound refid="gate_8h" kind="file"><name>gate.h</name>
+  </compound>
+  <compound refid="global__vars_8h" kind="file"><name>global_vars.h</name>
+  </compound>
   <compound refid="reader_8h" kind="file"><name>reader.h</name>
   </compound>
+  <compound refid="tag__decoder_8h" kind="file"><name>tag_decoder.h</name>
+  </compound>
+  <compound refid="gate__impl_8h" kind="file"><name>gate_impl.h</name>
+  </compound>
   <compound refid="reader__impl_8h" kind="file"><name>reader_impl.h</name>
+  </compound>
+  <compound refid="tag__decoder__impl_8h" kind="file"><name>tag_decoder_impl.h</name>
+  </compound>
+  <compound refid="gate__pydoc__template_8h" kind="file"><name>gate_pydoc_template.h</name>
+    <member refid="gate__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="gate__pydoc__template_8h_1a7df09f820b16526f5fea326739e6c874" kind="variable"><name>__doc_gr_reader_gate</name></member>
+    <member refid="gate__pydoc__template_8h_1aa384f064803145d66f4f1098421f39ba" kind="variable"><name>__doc_gr_reader_gate_gate</name></member>
+    <member refid="gate__pydoc__template_8h_1a91200c1ecab48071ee8f3717ea6fef82" kind="variable"><name>__doc_gr_reader_gate_make</name></member>
+  </compound>
+  <compound refid="global__vars__pydoc__template_8h" kind="file"><name>global_vars_pydoc_template.h</name>
+    <member refid="global__vars__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="global__vars__pydoc__template_8h_1aeb271db68e68f7b026ab756a68e1122c" kind="variable"><name>__doc_gr_reader_READER_STATS</name></member>
+    <member refid="global__vars__pydoc__template_8h_1a91869b8b29f7cca6e16c023e453d37ed" kind="variable"><name>__doc_gr_reader_READER_STATS_READER_STATS_0</name></member>
+    <member refid="global__vars__pydoc__template_8h_1a06a02e6329ed41d143dcf2f4de4d7cbc" kind="variable"><name>__doc_gr_reader_READER_STATS_READER_STATS_1</name></member>
+    <member refid="global__vars__pydoc__template_8h_1a5f709da791f16ee314002b2a8b963431" kind="variable"><name>__doc_gr_reader_READER_STATE</name></member>
+    <member refid="global__vars__pydoc__template_8h_1a0a0ccb18ccef61bc46c659422a17dfe6" kind="variable"><name>__doc_gr_reader_READER_STATE_READER_STATE_0</name></member>
+    <member refid="global__vars__pydoc__template_8h_1abd8f28d6933662a28c61a5b2c19bb801" kind="variable"><name>__doc_gr_reader_READER_STATE_READER_STATE_1</name></member>
+    <member refid="global__vars__pydoc__template_8h_1ac3c8ada6717924d93cf8b63ac6dcae01" kind="variable"><name>__doc_gr_reader_initialize_reader_state</name></member>
   </compound>
   <compound refid="reader__pydoc__template_8h" kind="file"><name>reader_pydoc_template.h</name>
     <member refid="reader__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
@@ -255,10 +259,6 @@
     <member refid="reader__pydoc__template_8h_1af28c172878645cd692900a87eae24186" kind="variable"><name>__doc_gr_reader_reader_make</name></member>
     <member refid="reader__pydoc__template_8h_1a352ff16a0b79663cce0967cc8b73338a" kind="variable"><name>__doc_gr_reader_reader_print_results</name></member>
   </compound>
-  <compound refid="tag__decoder_8h" kind="file"><name>tag_decoder.h</name>
-  </compound>
-  <compound refid="tag__decoder__impl_8h" kind="file"><name>tag_decoder_impl.h</name>
-  </compound>
   <compound refid="tag__decoder__pydoc__template_8h" kind="file"><name>tag_decoder_pydoc_template.h</name>
     <member refid="tag__decoder__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
     <member refid="tag__decoder__pydoc__template_8h_1afbe7c2f1c5f9c3115c5ee38bc47b4580" kind="variable"><name>__doc_gr_reader_tag_decoder</name></member>
@@ -267,9 +267,9 @@
   </compound>
   <compound refid="group__block" kind="group"><name>block</name>
   </compound>
-  <compound refid="dir_2fe02d8e7181026e3b57043e4923d631" kind="dir"><name>bindings</name>
-  </compound>
   <compound refid="dir_2065341f93cdcd1f4000eba7cb95d22e" kind="dir"><name>bindings</name>
+  </compound>
+  <compound refid="dir_2fe02d8e7181026e3b57043e4923d631" kind="dir"><name>bindings</name>
   </compound>
   <compound refid="dir_49e56c817e5e54854c35e136979f97ca" kind="dir"><name>docs</name>
   </compound>
@@ -285,15 +285,15 @@
   </compound>
   <compound refid="dir_f2cd86917185299abf5a1f0679072f3c" kind="dir"><name>other</name>
   </compound>
+  <compound refid="dir_ab3dd591509f89c87d6a9fd8136a6d03" kind="dir"><name>python</name>
+  </compound>
   <compound refid="dir_7837fde3ab9c1fb2fc5be7b717af8d79" kind="dir"><name>python</name>
   </compound>
-  <compound refid="dir_ab3dd591509f89c87d6a9fd8136a6d03" kind="dir"><name>python</name>
+  <compound refid="dir_8a0fbfd3e9321a48a71b43a3ba19c1b2" kind="dir"><name>reader</name>
   </compound>
   <compound refid="dir_7d400941dcf0ad27e3a613c8702ca616" kind="dir"><name>reader</name>
   </compound>
   <compound refid="dir_984c3dc6111be9a240996d9d415f7bc8" kind="dir"><name>reader</name>
-  </compound>
-  <compound refid="dir_8a0fbfd3e9321a48a71b43a3ba19c1b2" kind="dir"><name>reader</name>
   </compound>
   <compound refid="indexpage" kind="page"><name>index</name>
   </compound>

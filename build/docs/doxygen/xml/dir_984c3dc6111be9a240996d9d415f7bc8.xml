@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="dir_984c3dc6111be9a240996d9d415f7bc8" kind="dir">
     <compoundname>reader</compoundname>
     <innerdir refid="dir_2fe02d8e7181026e3b57043e4923d631">bindings</innerdir>
@@ -7,6 +7,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/"/>
+    <location file="/home/mzssbqd/gr-reader/python/reader/"/>
   </compounddef>
 </doxygen>

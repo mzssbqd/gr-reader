@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="global__vars__pydoc__template_8h" kind="file" language="C++">
     <compoundname>global_vars_pydoc_template.h</compoundname>
     <includes local="yes">pydoc_macros.h</includes>
@@ -14,21 +14,21 @@
         <label>pydoc_macros.h</label>
       </node>
     </incdepgraph>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="global__vars__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" prot="public" static="no">
         <name>D</name>
         <param><defname>...</defname></param>
-        <initializer><ref refid="docs_2doxygen_2pydoc__macros_8h_1a4e578031ec998eaeb933d5caa6a7d28a" kindref="member">DOC</ref>(gr,reader, __VA_ARGS__ )</initializer>
+        <initializer><ref refid="build_2python_2reader_2bindings_2pydoc__macros_8h_1a4e578031ec998eaeb933d5caa6a7d28a" kindref="member">DOC</ref>(gr,reader, __VA_ARGS__ )</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" line="10" column="10" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" bodystart="10" bodyend="-1"/>
+        <location file="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" line="10" column="10" bodyfile="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" bodystart="10" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
+    </sectiondef>
+    <sectiondef kind="var">
       <memberdef kind="variable" id="global__vars__pydoc__template_8h_1aeb271db68e68f7b026ab756a68e1122c" prot="public" static="yes" mutable="no">
         <type>const char *</type>
         <definition>const char* __doc_gr_reader_READER_STATS</definition>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" line="19" column="20" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" bodystart="19" bodyend="-1"/>
+        <location file="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" line="19" column="20" bodyfile="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="global__vars__pydoc__template_8h_1a91869b8b29f7cca6e16c023e453d37ed" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" line="22" column="20" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" bodystart="22" bodyend="-1"/>
+        <location file="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" line="22" column="20" bodyfile="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="global__vars__pydoc__template_8h_1a06a02e6329ed41d143dcf2f4de4d7cbc" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" line="25" column="20" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" bodystart="25" bodyend="-1"/>
+        <location file="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" line="25" column="20" bodyfile="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" bodystart="25" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="global__vars__pydoc__template_8h_1a5f709da791f16ee314002b2a8b963431" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" line="28" column="20" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" bodystart="28" bodyend="-1"/>
+        <location file="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" line="28" column="20" bodyfile="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="global__vars__pydoc__template_8h_1a0a0ccb18ccef61bc46c659422a17dfe6" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" line="31" column="20" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" bodystart="31" bodyend="-1"/>
+        <location file="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" line="31" column="20" bodyfile="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="global__vars__pydoc__template_8h_1abd8f28d6933662a28c61a5b2c19bb801" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" line="34" column="20" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" bodystart="34" bodyend="-1"/>
+        <location file="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" line="34" column="20" bodyfile="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="global__vars__pydoc__template_8h_1ac3c8ada6717924d93cf8b63ac6dcae01" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -125,13 +125,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" line="37" column="20" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" line="37" column="20" bodyfile="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h" bodystart="37" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h"/>
+    <location file="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/global_vars_pydoc_template.h"/>
   </compounddef>
 </doxygen>

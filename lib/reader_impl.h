@@ -59,12 +59,15 @@ private:
     float sample_d, n_data0_s, n_data1_s, n_cw_s, n_pw_s, n_delim_s, n_trcal_s;
     std::vector<float> data_0, data_1, cw, cw_ack, cw_query, delim, frame_sync, preamble, rtcal, trcal, query_bits, ack_bits, query_rep,nak, query_adjust_bits,p_down;
     int q_change; // 0-> increment, 1-> unchanged, 2-> decrement
-    
+    vector<float> d_tx_buf; size_t d_tx_pos; // 本地缓冲区以及缓冲区指针
     void gen_query_adjust_bits();
     void crc_append(std::vector<float> & q);
     void gen_query_bits();
     void gen_ack_bits(const float * in);
 
+    static inline void append_vec(std::vector<float>& dst, const std::vector<float>& src) {
+        dst.insert(dst.end(), src.begin(), src.end());
+    }
 public:
     reader_impl(float sample_rate, float dac_rate);
     ~reader_impl();

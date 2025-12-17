@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  ".1.0.0"
   "CMakeFiles/gnuradio-reader.dir/gate_impl.cc.o"
   "CMakeFiles/gnuradio-reader.dir/gate_impl.cc.o.d"
   "CMakeFiles/gnuradio-reader.dir/global_vars.cc.o"

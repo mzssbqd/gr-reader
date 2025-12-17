@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="dir_ab3dd591509f89c87d6a9fd8136a6d03" kind="dir">
     <compoundname>python</compoundname>
     <innerdir refid="dir_8a0fbfd3e9321a48a71b43a3ba19c1b2">reader</innerdir>
@@ -7,6 +7,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/build/python/"/>
+    <location file="/home/mzssbqd/gr-reader/build/python/"/>
   </compounddef>
 </doxygen>

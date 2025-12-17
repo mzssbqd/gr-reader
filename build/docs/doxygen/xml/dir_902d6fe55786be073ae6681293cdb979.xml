@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="dir_902d6fe55786be073ae6681293cdb979" kind="dir">
     <compoundname>gnuradio</compoundname>
     <innerdir refid="dir_7d400941dcf0ad27e3a613c8702ca616">reader</innerdir>
@@ -7,6 +7,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/"/>
+    <location file="/home/mzssbqd/gr-reader/include/gnuradio/"/>
   </compounddef>
 </doxygen>

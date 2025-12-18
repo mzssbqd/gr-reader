@@ -1,4 +1,4 @@
-# Install script for directory: /home/mzssbqd/gr-reader/docs
+# Install script for directory: /home/mzssbqd/Desktop/myOOT/gr-reader/docs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/mzssbqd/gr-reader/build/docs/doxygen/cmake_install.cmake")
+  include("/home/mzssbqd/Desktop/myOOT/gr-reader/build/docs/doxygen/cmake_install.cmake")
 
 endif()
 

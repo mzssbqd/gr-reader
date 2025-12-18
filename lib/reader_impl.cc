@@ -16,18 +16,21 @@ namespace reader {
 
 using input_type = float;
 using output_type = float;
-reader::sptr reader::make(float sample_rate, float dac_rate) { return gnuradio::make_block_sptr<reader_impl>(sample_rate, dac_rate); }
+reader::sptr reader::make(float sample_rate, float dac_rate, int num_sines, std::vector<float> freqs, std::vector<float> amps) {
+    return gnuradio::make_block_sptr<reader_impl>(sample_rate, dac_rate, num_sines, freqs, amps); 
+}
 
 
 /*
  * The private constructor
  */
-reader_impl::reader_impl(float sample_rate, float dac_rate)
+reader_impl::reader_impl(float sample_rate, float dac_rate, int num_sines, std::vector<float> freqs, std::vector<float> amps)
     : gr::block("reader",
                 gr::io_signature::make(
                     1 /* min inputs */, 1 /* max inputs */, sizeof(input_type)),
                 gr::io_signature::make(
-                    1 /* min outputs */, 1 /*max outputs */, sizeof(output_type)))
+                    1 /* min outputs */, 1 /*max outputs */, sizeof(output_type))),
+                    d_num_sines(num_sines), d_freqs(freqs), d_amps(amps)
 {
     GR_LOG_INFO(d_logger, "block initialized");
 
@@ -42,27 +45,52 @@ reader_impl::reader_impl(float sample_rate, float dac_rate)
     n_delim_s = DELIM_D / sample_d;
     n_trcal_s = TRCAL_D / sample_d;
 
-    // GR_LOG_INFO(d_logger, "Number of samples data 0 : " << n_data0_s);
-    // GR_LOG_INFO(d_logger, "Number of samples data 1 : " << n_data1_s);
-    // GR_LOG_INFO(d_logger, "Number of samples cw : "     << n_cw_s);
-    // GR_LOG_INFO(d_logger, "Number of samples delim : "  << n_delim_s);
-    // GR_LOG_INFO(d_logger, "Number of slots : "          << std::pow(2,FIXED_Q));
-
     // CW waveforms of different sizes
     n_cwquery_s   = (T1_D+T2_D+RN16_D)/sample_d;     //RN16
     n_cwack_s     = (3*T1_D+T2_D+EPC_D)/sample_d;    //EPC   if it is longer than nominal it wont cause tags to change inventoried flag
-    n_p_down_s     = (P_DOWN_D)/sample_d;
-
+    n_p_down_s    = (P_DOWN_D)/sample_d;
+    n_extra_cw    = (T1_D+T2_D+EPC_D)/sample_d;
 
     p_down.resize(n_p_down_s);        // Power down samples
     cw_query.resize(n_cwquery_s);      // Sent after query/query rep
     cw_ack.resize(n_cwack_s);          // Sent after ack
+    extra_cw.resize(n_cwack_s);
 
     std::fill_n(cw_query.begin(), cw_query.size(), 1);
     std::fill_n(cw_ack.begin(), cw_ack.size(), 1);
 
-    // GR_LOG_INFO(d_logger, "Carrier wave after a query transmission in samples : "     << n_cwquery_s);
-    // GR_LOG_INFO(d_logger, "Carrier wave after ACK transmission in samples : "        << n_cwack_s);
+    // creat extra cw
+    {
+
+    std::vector<double> phase(num_sines, 0.0);        // φ_k：每路初始相位
+    std::vector<double> phase_inc(num_sines, 0.0);    // Δφ_k：每路相位增量
+
+    const double two_pi = 2.0 * M_PI;
+
+    double max_cw_amps = 1;
+    for (int k = 0; k < num_sines; k++) {
+        phase_inc[k] = two_pi * (double)freqs[k] / (double)dac_rate;
+        max_cw_amps -= amps[k];
+    }
+    
+    for (size_t n = 0; n < extra_cw.size(); n++) {
+
+        float s = max_cw_amps;  // base CW（你原来的 cw_ack/cw_query 就是全 1）
+
+        for (int k = 0; k < num_sines; k++) {
+            // amps[k]*cos(phase[k]) 是第 k 路在该样点的贡献（实数）
+            s += (float)amps[k] * (float)std::cos(phase[k]);
+
+            // 相位推进：下一个样点相位增加 Δφ_k
+            phase[k] += phase_inc[k];
+
+            // 相位回绕到 [0, 2π)：避免相位无限变大导致 cos 精度变差
+            if (phase[k] >= two_pi) phase[k] -= two_pi;
+            else if (phase[k] < 0.0) phase[k] += two_pi;
+        }
+        extra_cw[n] = s;
+    }
+    }
 
     // Construct vectors (resize() default initialization is zero)
     data_0.resize(n_data0_s);
@@ -146,6 +174,7 @@ int reader_impl::general_work(int noutput_items,
     // 将本地缓冲区的数据先输出
     if (!d_tx_buf.empty()) 
     {
+        GR_LOG_INFO(d_debug_logger, "Output Buffer");
         const size_t remain = d_tx_buf.size() - d_tx_pos;
         const size_t n = std::min(remain, (size_t)noutput_items);
         std::memcpy(out + written, d_tx_buf.data() + d_tx_pos, n * sizeof(float));
@@ -257,7 +286,8 @@ int reader_impl::general_work(int noutput_items,
                 }
                 
                 consumed = ninput_items[0];
-                reader_state->gen2_logic_status = SEND_CW;
+                if(d_num_sines == 0) reader_state->gen2_logic_status = SEND_CW;
+                else reader_state->gen2_logic_status = SEND_EXTRA_CW;
             }
         }
             break;
@@ -269,6 +299,12 @@ int reader_impl::general_work(int noutput_items,
         }
             break;
 
+        case SEND_EXTRA_CW: {
+            GR_LOG_INFO(d_debug_logger, "SEND EXTRA CW");
+            append_vec(d_tx_buf, extra_cw);
+            reader_state->gen2_logic_status = IDLE;      // Return to IDLE
+        }
+            break;
         case SEND_QUERY_REP: {
             GR_LOG_INFO(d_debug_logger, "SEND QUERY_REP");
             // GR_LOG_INFO(d_debug_logger, "INVENTORY ROUND : " << reader_state->reader_stats.cur_inventory_round << " SLOT NUMBER : " << reader_state->reader_stats.cur_slot_number);
@@ -328,7 +364,7 @@ int reader_impl::general_work(int noutput_items,
     }
 
     consume_each (consumed);
-    return  written;
+    return written;
 }
 
 /* Function adapted from https://www.cgran.org/wiki/Gen2 */

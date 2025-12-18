@@ -1,4 +1,4 @@
-# Install script for directory: /home/mzssbqd/gr-reader/docs/doxygen
+# Install script for directory: /home/mzssbqd/Desktop/myOOT/gr-reader/docs/doxygen
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -42,10 +42,10 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/doc/gr-reader" TYPE DIRECTORY FILES
-    "/home/mzssbqd/gr-reader/build/docs/doxygen/xml"
-    "/home/mzssbqd/gr-reader/build/docs/doxygen/html"
+    "/home/mzssbqd/Desktop/myOOT/gr-reader/build/docs/doxygen/xml"
+    "/home/mzssbqd/Desktop/myOOT/gr-reader/build/docs/doxygen/html"
     )
 endif()
 

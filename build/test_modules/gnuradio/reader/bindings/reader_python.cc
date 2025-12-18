@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(reader.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(e14e4cb8292261a3ff411a3ca0df32d5)                     */
+/* BINDTOOL_HEADER_FILE_HASH(403b7503ed867632f7e9c26712052b95)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -39,6 +39,9 @@ void bind_reader(py::module& m)
         .def(py::init(&reader::make),
            py::arg("sample_rate"),
            py::arg("dac_rate"),
+           py::arg("num_sines"),
+           py::arg("freqs"),
+           py::arg("amps"),
            D(reader,make)
         )
         

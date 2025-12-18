@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(global_vars.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(7dbdda9092d4d08cc6b7ce91a0a91d20)                     */
+/* BINDTOOL_HEADER_FILE_HASH(0e26144cf6b54975753cdd1074e70aab)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -68,11 +68,12 @@ void bind_global_vars(py::module& m)
         .value("SEND_QUERY_REP", ::gr::reader::SEND_QUERY_REP) // 2
         .value("IDLE", ::gr::reader::IDLE) // 3
         .value("SEND_CW", ::gr::reader::SEND_CW) // 4
-        .value("START", ::gr::reader::START) // 5
-        .value("SEND_QUERY_ADJUST", ::gr::reader::SEND_QUERY_ADJUST) // 6
-        .value("SEND_NAK_QR", ::gr::reader::SEND_NAK_QR) // 7
-        .value("SEND_NAK_Q", ::gr::reader::SEND_NAK_Q) // 8
-        .value("POWER_DOWN", ::gr::reader::POWER_DOWN) // 9
+        .value("SEND_EXTRA_CW", ::gr::reader::SEND_EXTRA_CW) // 5
+        .value("START", ::gr::reader::START) // 6
+        .value("SEND_QUERY_ADJUST", ::gr::reader::SEND_QUERY_ADJUST) // 7
+        .value("SEND_NAK_QR", ::gr::reader::SEND_NAK_QR) // 8
+        .value("SEND_NAK_Q", ::gr::reader::SEND_NAK_Q) // 9
+        .value("POWER_DOWN", ::gr::reader::POWER_DOWN) // 10
         .export_values()
     ;
 

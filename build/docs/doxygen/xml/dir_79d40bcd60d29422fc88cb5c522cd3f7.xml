@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dir_79d40bcd60d29422fc88cb5c522cd3f7" kind="dir">
     <compoundname>docstrings</compoundname>
     <innerfile refid="gate__pydoc__template_8h">gate_pydoc_template.h</innerfile>
@@ -10,6 +10,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/mzssbqd/gr-reader/python/reader/bindings/docstrings/"/>
+    <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings/docstrings/"/>
   </compounddef>
 </doxygen>

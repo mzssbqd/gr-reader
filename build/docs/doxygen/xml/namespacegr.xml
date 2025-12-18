@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="namespacegr" kind="namespace" language="C++">
     <compoundname>gr</compoundname>
     <innernamespace refid="namespacegr_1_1reader">gr::reader</innernamespace>
@@ -7,6 +7,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/mzssbqd/gr-reader/include/gnuradio/reader/gate.h" line="14" column="1"/>
+    <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/gate.h" line="14" column="1"/>
   </compounddef>
 </doxygen>

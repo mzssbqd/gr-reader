@@ -15,7 +15,7 @@ namespace reader {
 using input_type = gr_complex;
 using output_type = std::vector<int>;
 
-tag_decoder::sptr tag_decoder::make(int sample_rate)
+tag_decoder::sptr tag_decoder::make(float sample_rate)
 {
     std::vector<int> output_sizes;
     output_sizes.push_back(sizeof(float));
@@ -26,7 +26,7 @@ tag_decoder::sptr tag_decoder::make(int sample_rate)
 /*
  * The private constructor
  */
-tag_decoder_impl::tag_decoder_impl(int sample_rate, std::vector<int> output_sizes)
+tag_decoder_impl::tag_decoder_impl(float sample_rate, std::vector<int> output_sizes)
     : gr::block("tag_decoder",
                 gr::io_signature::make(
                     1 /* min inputs */, 1 /* max inputs */, sizeof(input_type)),
@@ -100,6 +100,7 @@ int tag_decoder_impl::general_work(int noutput_items,
         }
         else // 标签没有发现前导码
         {  
+            GR_LOG_INFO(d_debug_logger, "RN16 DECODED FAILURE");
             reader_state->reader_stats.cur_slot_number++;
             if(reader_state->reader_stats.cur_slot_number > reader_state->reader_stats.max_slot_number)
             {
@@ -150,6 +151,7 @@ int tag_decoder_impl::general_work(int noutput_items,
             
             if(check_crc(char_bits,128) == 1)
             {
+                GR_LOG_INFO(d_debug_logger, "EPC DECODED");
                 if(reader_state->reader_stats.cur_slot_number > reader_state->reader_stats.max_slot_number)
                 {
                     reader_state->reader_stats.cur_slot_number = 1;
@@ -186,7 +188,7 @@ int tag_decoder_impl::general_work(int noutput_items,
                 }
             }
             else
-            {     
+            {
                 if(reader_state->reader_stats.cur_slot_number > reader_state->reader_stats.max_slot_number)
                 {
                     reader_state->reader_stats.cur_slot_number = 1;

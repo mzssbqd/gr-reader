@@ -1,4 +1,4 @@
-# Install script for directory: /home/mzssbqd/gr-reader/apps
+# Install script for directory: /home/mzssbqd/Desktop/myOOT/gr-reader/apps
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

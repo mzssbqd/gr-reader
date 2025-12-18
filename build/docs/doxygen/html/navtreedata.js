@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "GNU Radio's READER Package", "index.html", [
-    [ "Topics", "topics.html", "topics" ],
+    [ "Modules", "modules.html", "modules" ],
     [ "Namespace Members", "namespacemembers.html", [
       [ "All", "namespacemembers.html", null ],
       [ "Functions", "namespacemembers_func.html", null ],

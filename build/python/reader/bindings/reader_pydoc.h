@@ -26,7 +26,10 @@ To avoid accidental use of raw pointers, reader::reader's constructor is in a pr
 
 Args:
     sample_rate : 
-    dac_rate : )doc";
+    dac_rate : 
+    num_sines : 
+    freqs : 
+    amps : )doc";
 
 
  static const char *__doc_gr_reader_reader_reader_0 = R"doc()doc";
@@ -45,7 +48,10 @@ To avoid accidental use of raw pointers, reader::reader's constructor is in a pr
 
 Args:
     sample_rate : 
-    dac_rate : )doc";
+    dac_rate : 
+    num_sines : 
+    freqs : 
+    amps : )doc";
 
 
  static const char *__doc_gr_reader_reader_print_results = R"doc()doc";

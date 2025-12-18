@@ -1,4 +1,4 @@
-# Install script for directory: /home/mzssbqd/gr-reader/python/reader/bindings
+# Install script for directory: /home/mzssbqd/Desktop/myOOT/gr-reader/python/reader/bindings
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -42,27 +42,23 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "pythonapi" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/reader/reader_python.cpython-312-aarch64-linux-gnu.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/reader/reader_python.cpython-312-aarch64-linux-gnu.so")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xpythonapix" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.10/dist-packages/gnuradio/reader/reader_python.cpython-310-x86_64-linux-gnu.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.10/dist-packages/gnuradio/reader/reader_python.cpython-310-x86_64-linux-gnu.so")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/reader/reader_python.cpython-312-aarch64-linux-gnu.so"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.10/dist-packages/gnuradio/reader/reader_python.cpython-310-x86_64-linux-gnu.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/reader" TYPE MODULE FILES "/home/mzssbqd/gr-reader/build/python/reader/bindings/reader_python.cpython-312-aarch64-linux-gnu.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/reader/reader_python.cpython-312-aarch64-linux-gnu.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/reader/reader_python.cpython-312-aarch64-linux-gnu.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.10/dist-packages/gnuradio/reader" TYPE MODULE FILES "/home/mzssbqd/Desktop/myOOT/gr-reader/build/python/reader/bindings/reader_python.cpython-310-x86_64-linux-gnu.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.10/dist-packages/gnuradio/reader/reader_python.cpython-310-x86_64-linux-gnu.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.10/dist-packages/gnuradio/reader/reader_python.cpython-310-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/reader/reader_python.cpython-312-aarch64-linux-gnu.so"
-         OLD_RPATH "/home/mzssbqd/gr-reader/build/lib:"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.10/dist-packages/gnuradio/reader/reader_python.cpython-310-x86_64-linux-gnu.so"
+         OLD_RPATH "/home/mzssbqd/Desktop/myOOT/gr-reader/build/lib:/usr/local/lib:/home/mzssbqd/miniconda3/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/reader/reader_python.cpython-312-aarch64-linux-gnu.so")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.10/dist-packages/gnuradio/reader/reader_python.cpython-310-x86_64-linux-gnu.so")
     endif()
   endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "pythonapi" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/mzssbqd/gr-reader/build/python/reader/bindings/CMakeFiles/reader_python.dir/install-cxx-module-bmi-Release.cmake" OPTIONAL)
 endif()
 

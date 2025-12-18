@@ -32,7 +32,7 @@ public:
      * class. reader::tag_decoder::make is the public interface for
      * creating new instances.
      */
-    static sptr make(int sample_rate);
+    static sptr make(float sample_rate);
 };
 
 } // namespace reader

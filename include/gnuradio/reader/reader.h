@@ -10,6 +10,7 @@
 
 #include <gnuradio/block.h>
 #include <gnuradio/reader/api.h>
+#include <vector>
 
 namespace gr {
 namespace reader {
@@ -31,7 +32,7 @@ public:
      * class. reader::reader::make is the public interface for
      * creating new instances.
      */
-    static sptr make(float sample_rate, float dac_rate);
+    static sptr make(float sample_rate, float dac_rate, int num_sines, std::vector<float> freqs, std::vector<float> amps);
     virtual void print_results() = 0;
 };
 

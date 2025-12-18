@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(gate.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(c220faa367c408bdc3f73b2b4a65b720)                     */
+/* BINDTOOL_HEADER_FILE_HASH(399ab145579207a6133b08bc4a92e1fa)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -30,13 +30,14 @@ namespace py = pybind11;
 void bind_gate(py::module& m)
 {
 
-    using gate    = gr::reader::gate;
+    using gate    = ::gr::reader::gate;
 
 
     py::class_<gate, gr::block, gr::basic_block,
         std::shared_ptr<gate>>(m, "gate", D(gate))
 
         .def(py::init(&gate::make),
+           py::arg("sample_rate"),
            D(gate,make)
         )
         

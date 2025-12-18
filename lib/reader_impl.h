@@ -56,10 +56,14 @@ private:
     * - crc_append(q): 对命令比特序列追加 CRC（Query/QueryAdjust 通常为 CRC5，具体以实现为准）。
     */
     int s_rate, d_rate,  n_cwquery_s,  n_cwack_s,n_p_down_s;
-    float sample_d, n_data0_s, n_data1_s, n_cw_s, n_pw_s, n_delim_s, n_trcal_s;
-    std::vector<float> data_0, data_1, cw, cw_ack, cw_query, delim, frame_sync, preamble, rtcal, trcal, query_bits, ack_bits, query_rep,nak, query_adjust_bits,p_down;
+    float sample_d, n_data0_s, n_data1_s, n_cw_s, n_pw_s, n_delim_s, n_trcal_s, n_extra_cw;
+    std::vector<float> data_0, data_1, cw, cw_ack, cw_query, delim, frame_sync, preamble, rtcal, trcal, query_bits, ack_bits, query_rep,nak, query_adjust_bits,p_down, extra_cw;
     int q_change; // 0-> increment, 1-> unchanged, 2-> decrement
-    vector<float> d_tx_buf; size_t d_tx_pos; // 本地缓冲区以及缓冲区指针
+    
+    std::vector<float> d_tx_buf; size_t d_tx_pos; // 本地缓冲区以及缓冲区指针
+
+    int d_num_sines;
+    std::vector<float> d_freqs, d_amps;
     void gen_query_adjust_bits();
     void crc_append(std::vector<float> & q);
     void gen_query_bits();
@@ -69,7 +73,7 @@ private:
         dst.insert(dst.end(), src.begin(), src.end());
     }
 public:
-    reader_impl(float sample_rate, float dac_rate);
+    reader_impl(float sample_rate, float dac_rate, int nums_sine, std::vector<float> freq, std::vector<float> amp);
     ~reader_impl();
 
     void print_results();

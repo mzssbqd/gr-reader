@@ -18,7 +18,7 @@
 namespace gr {
 namespace reader {
     enum STATUS {RUNNING, TERMINATED}; // reader状态
-    enum GEN2_LOGIC_STATUS {SEND_QUERY, SEND_ACK, SEND_QUERY_REP, IDLE, SEND_CW, START, SEND_QUERY_ADJUST, SEND_NAK_QR, SEND_NAK_Q, POWER_DOWN};
+    enum GEN2_LOGIC_STATUS {SEND_QUERY, SEND_ACK, SEND_QUERY_REP, IDLE, SEND_CW, SEND_EXTRA_CW, START, SEND_QUERY_ADJUST, SEND_NAK_QR, SEND_NAK_Q, POWER_DOWN};
     enum GATE_STATUS {GATE_OPEN, GATE_CLOSED, GATE_SEEK_RN16, GATE_SEEK_EPC, GATE_Handle};
     enum DECODER_STATUS {DECODER_DECODE_RN16, DECODER_DECODE_EPC};
 
@@ -48,7 +48,6 @@ namespace reader {
 
         std::vector<float> magn_squared_samples; // Gate 在开门期间记录的 |x[n]|^2 序列（Decoder 用于同步/符号周期微调）
         int n_samples_to_ungate;                 // 本次需要放行的样点数
-        
     };
 
     // 配置

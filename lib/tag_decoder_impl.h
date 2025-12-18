@@ -31,7 +31,7 @@ private:
 
 
 public:
-    tag_decoder_impl(int sample_rate, std::vector<int> output_sizes);
+    tag_decoder_impl(float sample_rate, std::vector<int> output_sizes);
     ~tag_decoder_impl();
 
     // Where all the action really happens

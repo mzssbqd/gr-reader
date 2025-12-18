@@ -1,7 +1,7 @@
 var global__vars_8h =
 [
-    [ "gr::reader::READER_STATS", "structgr_1_1reader_1_1READER__STATS.html", "structgr_1_1reader_1_1READER__STATS" ],
-    [ "gr::reader::READER_STATE", "structgr_1_1reader_1_1READER__STATE.html", "structgr_1_1reader_1_1READER__STATE" ],
+    [ "READER_STATS", "structgr_1_1reader_1_1READER__STATS.html", "structgr_1_1reader_1_1READER__STATS" ],
+    [ "READER_STATE", "structgr_1_1reader_1_1READER__STATE.html", "structgr_1_1reader_1_1READER__STATE" ],
     [ "DECODER_STATUS", "global__vars_8h.html#a58e34f0b1b6ddfccb60d341182cd422a", [
       [ "DECODER_DECODE_RN16", "global__vars_8h.html#a58e34f0b1b6ddfccb60d341182cd422aa149ce4b3391283cf3c7fa4cd1f08341e", null ],
       [ "DECODER_DECODE_EPC", "global__vars_8h.html#a58e34f0b1b6ddfccb60d341182cd422aa085fd93afeefa2255973977eef73d067", null ]
@@ -19,6 +19,7 @@ var global__vars_8h =
       [ "SEND_QUERY_REP", "global__vars_8h.html#aa93ad935c8263d46838aa697da1dd84ea7e28c8fcac21b476b7a98471de57deb3", null ],
       [ "IDLE", "global__vars_8h.html#aa93ad935c8263d46838aa697da1dd84ea524761f415ab17aaf6efd6002287e8fc", null ],
       [ "SEND_CW", "global__vars_8h.html#aa93ad935c8263d46838aa697da1dd84ea1c1f45eb60f9043687e9d786bff7c2ac", null ],
+      [ "SEND_EXTRA_CW", "global__vars_8h.html#aa93ad935c8263d46838aa697da1dd84ea06f9ef0167467c2ab92f3dcd74a66f8c", null ],
       [ "START", "global__vars_8h.html#aa93ad935c8263d46838aa697da1dd84ea59fa2b8a9729f1f5e3d6a52df0308565", null ],
       [ "SEND_QUERY_ADJUST", "global__vars_8h.html#aa93ad935c8263d46838aa697da1dd84eaf7edbce57d728a0cb49d7a5f79a60b6b", null ],
       [ "SEND_NAK_QR", "global__vars_8h.html#aa93ad935c8263d46838aa697da1dd84eac1722ca6014c0bfef0208f555a25a075", null ],

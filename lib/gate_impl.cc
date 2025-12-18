@@ -13,7 +13,7 @@ namespace reader {
 using input_type = gr_complex;
 using output_type = gr_complex;
 
-gate::sptr gate::make(int sample_rate)
+gate::sptr gate::make(float sample_rate)
 {
     return gnuradio::make_block_sptr<gate_impl>(sample_rate);
 }
@@ -21,7 +21,7 @@ gate::sptr gate::make(int sample_rate)
 /*
  * The private constructor
  */
-gate_impl::gate_impl(int sample_rate)
+gate_impl::gate_impl(float sample_rate)
     : gr::block("gate",
                 gr::io_signature::make(
                     1 /* min inputs */, 1 /* max inputs */, sizeof(input_type)),
@@ -80,12 +80,14 @@ int gate_impl::general_work(int noutput_items,
 
     if(reader_state->gate_status == GATE_SEEK_EPC)
     {
+        GR_LOG_INFO(d_debug_logger, "GATE SEEK EPC");
         reader_state->gate_status = GATE_CLOSED;
         reader_state->n_samples_to_ungate = (EPC_BITS + TAG_PREAMBLE_BITS) * n_samples_TAG_BIT + 2*n_samples_TAG_BIT;
         n_samples = 0;
     }
     else if (reader_state->gate_status == GATE_SEEK_RN16)
     {
+        GR_LOG_INFO(d_debug_logger, "GATE SEEK RN16");
         reader_state->gate_status = GATE_CLOSED;
         reader_state->n_samples_to_ungate = (RN16_BITS + TAG_PREAMBLE_BITS) * n_samples_TAG_BIT + 2*n_samples_TAG_BIT;
         n_samples = 0;
@@ -102,7 +104,7 @@ int gate_impl::general_work(int noutput_items,
             win_samples[win_index] = sample_ampl; 
             win_index = (win_index + 1) % win_length;
             //Threshold for detecting negative/positive edges
-            sample_thresh = avg_ampl * THRESH_FRACTION;  
+            sample_thresh = avg_ampl * THRESH_FRACTION;
 
             if( !(reader_state->gate_status == GATE_OPEN) )
             {

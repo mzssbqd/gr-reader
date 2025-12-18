@@ -15,8 +15,8 @@ templates:
 parameters:
 - id: sample_rate
   label: Sample_rate
-  dtype: int
-  default: 2500000
+  dtype: float
+  default: 2e6
 
 inputs:
 - label: int

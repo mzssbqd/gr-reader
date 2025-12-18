@@ -38,7 +38,7 @@ private:
 
 
 public:
-    gate_impl(int sample_rate);
+    gate_impl(float sample_rate);
     ~gate_impl();
 
     // Where all the action really happens

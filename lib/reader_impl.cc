@@ -9,6 +9,7 @@
 #include <gnuradio/io_signature.h>
 #include <sys/time.h>
 #include <gnuradio/reader/global_vars.h>
+#include <algorithm>
 #include <cmath>
 
 namespace gr {
@@ -59,37 +60,46 @@ reader_impl::reader_impl(float sample_rate, float dac_rate, int num_sines, std::
     std::fill_n(cw_query.begin(), cw_query.size(), 1);
     std::fill_n(cw_ack.begin(), cw_ack.size(), 1);
 
-    // creat extra cw
+    // create extra cw
     {
+        std::vector<double> phase(num_sines, 0.0);        // φ_k：每路初始相位
+        std::vector<double> phase_inc(num_sines, 0.0);    // Δφ_k：每路相位增量
 
-    std::vector<double> phase(num_sines, 0.0);        // φ_k：每路初始相位
-    std::vector<double> phase_inc(num_sines, 0.0);    // Δφ_k：每路相位增量
+        const double two_pi = 2.0 * M_PI;
 
-    const double two_pi = 2.0 * M_PI;
-
-    double max_cw_amps = 1;
-    for (int k = 0; k < num_sines; k++) {
-        phase_inc[k] = two_pi * (double)freqs[k] / (double)dac_rate;
-        max_cw_amps -= amps[k];
-    }
-    
-    for (size_t n = 0; n < extra_cw.size(); n++) {
-
-        float s = max_cw_amps;  // base CW（你原来的 cw_ack/cw_query 就是全 1）
-
+        double max_cw_amps = 1;
         for (int k = 0; k < num_sines; k++) {
-            // amps[k]*cos(phase[k]) 是第 k 路在该样点的贡献（实数）
-            s += (float)amps[k] * (float)std::cos(phase[k]);
-
-            // 相位推进：下一个样点相位增加 Δφ_k
-            phase[k] += phase_inc[k];
-
-            // 相位回绕到 [0, 2π)：避免相位无限变大导致 cos 精度变差
-            if (phase[k] >= two_pi) phase[k] -= two_pi;
-            else if (phase[k] < 0.0) phase[k] += two_pi;
+            phase_inc[k] = two_pi * (double)freqs[k] / (double)dac_rate;
+            max_cw_amps -= amps[k];
         }
-        extra_cw[n] = s;
-    }
+
+        const size_t n_pre_plain = std::min(
+            (size_t)std::max(0.0f, (float)(0.3f * T1_D / sample_d)),
+            extra_cw.size());
+        const size_t mt_start = n_pre_plain;
+        const size_t mt_end = extra_cw.size();
+
+        for (size_t n = 0; n < extra_cw.size(); n++) {
+            if (n < mt_start) {
+                extra_cw[n] = 1.0f;
+                continue;
+            }
+
+            float s = max_cw_amps;  // base CW
+
+            for (int k = 0; k < num_sines; k++) {
+                // amps[k]*cos(phase[k]) 是第 k 路在该样点的贡献（实数）
+                s += (float)amps[k] * (float)std::cos(phase[k]);
+
+                // 相位推进：下一个样点相位增加 Δφ_k
+                phase[k] += phase_inc[k];
+
+                // 相位回绕到 [0, 2π)：避免相位无限变大导致 cos 精度变差
+                if (phase[k] >= two_pi) phase[k] -= two_pi;
+                else if (phase[k] < 0.0) phase[k] += two_pi;
+            }
+            extra_cw[n] = s;
+        }
     }
 
     // Construct vectors (resize() default initialization is zero)

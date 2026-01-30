@@ -38,7 +38,7 @@ gate_impl::gate_impl(float sample_rate)
 
     win_samples.resize(win_length);
     dc_samples.resize(dc_length);
-    
+
     // First block to be scheduled
     GR_LOG_INFO(d_logger, "Initializing reader state...");
     initialize_reader_state();
@@ -125,9 +125,15 @@ int gate_impl::general_work(int noutput_items,
                 else if (sample_ampl > sample_thresh && signal_state == NEG_EDGE)
                 {
                     signal_state = POS_EDGE;
-                    if (n_samples > n_samples_PW/2) num_pulses++;
+                    // if (n_samples > n_samples_PW/2) num_pulses++;
+                    // else num_pulses = 0;
+
+                    if (n_samples >= n_samples_PW/2) {
+                        num_pulses++;
+                    }
                     else num_pulses = 0;
                     n_samples = 0;
+                    GR_LOG_INFO(d_debug_logger, "num_pulses: " + std::to_string(num_pulses));
                 }
 
                 if(n_samples > n_samples_T1 && signal_state == POS_EDGE && num_pulses > NUM_PULSES_COMMAND)

@@ -7,6 +7,7 @@ var structgr_1_1reader_1_1READER__STATS =
     [ "max_slot_number", "structgr_1_1reader_1_1READER__STATS.html#a6d8fd75d0f1986f0595c3740afa06a13", null ],
     [ "n_epc_correct", "structgr_1_1reader_1_1READER__STATS.html#a4b0bd74427ec269cc600b4b3952b7797", null ],
     [ "n_queries_sent", "structgr_1_1reader_1_1READER__STATS.html#af8cc609b0536b9af503413c5d1111a96", null ],
+    [ "tag_epc_hex", "structgr_1_1reader_1_1READER__STATS.html#a8362f76fad7a7f85f2ca86e67693ffd4", null ],
     [ "tag_reads", "structgr_1_1reader_1_1READER__STATS.html#ae702a0d498beb18bd90e48616830027a", null ],
     [ "unique_tags_round", "structgr_1_1reader_1_1READER__STATS.html#a05b0251d54bfef9664de748f3d20bb91", null ]
 ];

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="28" column="13" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="28" bodyend="-1"/>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="29" column="13" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structgr_1_1reader_1_1READER__STATS_1a3aacd7fcb4b477fbfdb99867625ef212" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="29" column="13" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="29" bodyend="-1"/>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="30" column="13" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structgr_1_1reader_1_1READER__STATS_1a5a663b59dce0052dfdb7c32333841b85" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="30" column="13" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="30" bodyend="-1"/>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="31" column="13" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structgr_1_1reader_1_1READER__STATS_1a6d8fd75d0f1986f0595c3740afa06a13" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="31" column="13" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="31" bodyend="-1"/>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="32" column="13" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structgr_1_1reader_1_1READER__STATS_1a38576a737d21eefea1681d6b4cf521b7" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="32" column="13" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="32" bodyend="-1"/>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="33" column="13" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structgr_1_1reader_1_1READER__STATS_1a4b0bd74427ec269cc600b4b3952b7797" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="33" column="13" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="34" column="13" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structgr_1_1reader_1_1READER__STATS_1a05b0251d54bfef9664de748f3d20bb91" prot="public" static="no" mutable="no">
         <type>std::vector&lt; int &gt;</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="34" column="21" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="34" bodyend="-1"/>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="35" column="21" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structgr_1_1reader_1_1READER__STATS_1ae702a0d498beb18bd90e48616830027a" prot="public" static="no" mutable="no">
         <type>std::map&lt; int, int &gt;</type>
@@ -106,7 +106,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="35" column="18" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="35" bodyend="-1"/>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="36" column="18" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgr_1_1reader_1_1READER__STATS_1a8362f76fad7a7f85f2ca86e67693ffd4" prot="public" static="no" mutable="no">
+        <type>std::map&lt; int, std::string &gt;</type>
+        <definition>std::map&lt;int,std::string&gt; gr::reader::READER_STATS::tag_epc_hex</definition>
+        <argsstring></argsstring>
+        <name>tag_epc_hex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="37" column="18" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structgr_1_1reader_1_1READER__STATS_1af8c73bb683de6cdb76976c0adf44cca1" prot="public" static="no" mutable="no">
         <type>struct timeval start</type>
@@ -119,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="35" column="18" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="36" bodyend="-1"/>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="37" column="18" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -127,6 +140,15 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
+      <node id="4">
+        <label>std::map&lt; int, std::string &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
       <node id="2">
         <label>std::map&lt; int, int &gt;</label>
       </node>
@@ -139,12 +161,20 @@
         <childnode refid="3" relation="usage">
           <edgelabel>unique_tags_round</edgelabel>
         </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>tag_epc_hex</edgelabel>
+        </childnode>
       </node>
       <node id="3">
         <label>std::vector&lt; int &gt;</label>
       </node>
+      <node id="5">
+        <label>std::string</label>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
     </collaborationgraph>
-    <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="26" column="5" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="27" bodyend="37"/>
+    <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" line="27" column="5" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/global_vars.h" bodystart="28" bodyend="39"/>
     <listofallmembers>
       <member refid="structgr_1_1reader_1_1READER__STATS_1a3aacd7fcb4b477fbfdb99867625ef212" prot="public" virt="non-virtual"><scope>gr::reader::READER_STATS</scope><name>cur_inventory_round</name></member>
       <member refid="structgr_1_1reader_1_1READER__STATS_1a5a663b59dce0052dfdb7c32333841b85" prot="public" virt="non-virtual"><scope>gr::reader::READER_STATS</scope><name>cur_slot_number</name></member>
@@ -153,6 +183,7 @@
       <member refid="structgr_1_1reader_1_1READER__STATS_1a6d8fd75d0f1986f0595c3740afa06a13" prot="public" virt="non-virtual"><scope>gr::reader::READER_STATS</scope><name>max_slot_number</name></member>
       <member refid="structgr_1_1reader_1_1READER__STATS_1a4b0bd74427ec269cc600b4b3952b7797" prot="public" virt="non-virtual"><scope>gr::reader::READER_STATS</scope><name>n_epc_correct</name></member>
       <member refid="structgr_1_1reader_1_1READER__STATS_1af8cc609b0536b9af503413c5d1111a96" prot="public" virt="non-virtual"><scope>gr::reader::READER_STATS</scope><name>n_queries_sent</name></member>
+      <member refid="structgr_1_1reader_1_1READER__STATS_1a8362f76fad7a7f85f2ca86e67693ffd4" prot="public" virt="non-virtual"><scope>gr::reader::READER_STATS</scope><name>tag_epc_hex</name></member>
       <member refid="structgr_1_1reader_1_1READER__STATS_1ae702a0d498beb18bd90e48616830027a" prot="public" virt="non-virtual"><scope>gr::reader::READER_STATS</scope><name>tag_reads</name></member>
       <member refid="structgr_1_1reader_1_1READER__STATS_1a05b0251d54bfef9664de748f3d20bb91" prot="public" virt="non-virtual"><scope>gr::reader::READER_STATS</scope><name>unique_tags_round</name></member>
     </listofallmembers>

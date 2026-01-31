@@ -32,7 +32,16 @@ public:
      * class. reader::reader::make is the public interface for
      * creating new instances.
      */
-    static sptr make(float sample_rate, float dac_rate, int num_sines, std::vector<float> freqs, std::vector<float> amps);
+    static sptr make(float sample_rate,
+                     float dac_rate,
+                     int num_sines,
+                     std::vector<float> freqs,
+                     std::vector<float> amps,
+                     int fixed_q = 0,
+                     int max_num_queries = 1000,
+                     bool p_down = false,
+                     int session_0 = 0,
+                     int session_1 = 0);
     virtual void print_results() = 0;
 };
 

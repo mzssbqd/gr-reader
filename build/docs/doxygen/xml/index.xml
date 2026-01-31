@@ -32,7 +32,7 @@
   </compound>
   <compound refid="classgr_1_1reader_1_1reader" kind="class"><name>gr::reader::reader</name>
     <member refid="classgr_1_1reader_1_1reader_1a40680436129db72814f66ff23ef76de1" kind="typedef"><name>sptr</name></member>
-    <member refid="classgr_1_1reader_1_1reader_1ace479402b5e1b87531f55c61d1063c4d" kind="function"><name>make</name></member>
+    <member refid="classgr_1_1reader_1_1reader_1a87936852b7907d9176a71188a2446ac6" kind="function"><name>make</name></member>
     <member refid="classgr_1_1reader_1_1reader_1a595d2720ddcda29d5363ca2dcc2c231d" kind="function"><name>print_results</name></member>
   </compound>
   <compound refid="classgr_1_1reader_1_1reader__impl" kind="class"><name>gr::reader::reader_impl</name>
@@ -77,7 +77,7 @@
     <member refid="classgr_1_1reader_1_1reader__impl_1ad4c270b55d99d587df8a0175092de501" kind="function"><name>gen_query_bits</name></member>
     <member refid="classgr_1_1reader_1_1reader__impl_1a4af77c5929cc0360b09f23ee773e00b4" kind="function"><name>gen_ack_bits</name></member>
     <member refid="classgr_1_1reader_1_1reader__impl_1a41e034eb685c7f72233c26406de24e66" kind="function"><name>append_vec</name></member>
-    <member refid="classgr_1_1reader_1_1reader__impl_1aa2e853506569a3e4d4b0ca3393202c22" kind="function"><name>reader_impl</name></member>
+    <member refid="classgr_1_1reader_1_1reader__impl_1a182bd38067ebe1d26c79f14ee5238813" kind="function"><name>reader_impl</name></member>
     <member refid="classgr_1_1reader_1_1reader__impl_1aba28ea266f939de54287fce05c007054" kind="function"><name>~reader_impl</name></member>
     <member refid="classgr_1_1reader_1_1reader__impl_1a613dea6948f8af08ef738011b663f45f" kind="function"><name>print_results</name></member>
     <member refid="classgr_1_1reader_1_1reader__impl_1a70c1b5a05751990e4e74e7e8d2cf7da4" kind="function"><name>forecast</name></member>
@@ -101,6 +101,7 @@
     <member refid="structgr_1_1reader_1_1READER__STATS_1a4b0bd74427ec269cc600b4b3952b7797" kind="variable"><name>n_epc_correct</name></member>
     <member refid="structgr_1_1reader_1_1READER__STATS_1a05b0251d54bfef9664de748f3d20bb91" kind="variable"><name>unique_tags_round</name></member>
     <member refid="structgr_1_1reader_1_1READER__STATS_1ae702a0d498beb18bd90e48616830027a" kind="variable"><name>tag_reads</name></member>
+    <member refid="structgr_1_1reader_1_1READER__STATS_1a8362f76fad7a7f85f2ca86e67693ffd4" kind="variable"><name>tag_epc_hex</name></member>
     <member refid="structgr_1_1reader_1_1READER__STATS_1af8c73bb683de6cdb76976c0adf44cca1" kind="variable"><name>end</name></member>
   </compound>
   <compound refid="classgr_1_1reader_1_1tag__decoder" kind="class"><name>gr::reader::tag_decoder</name>
@@ -150,10 +151,10 @@
     <member refid="namespacegr_1_1reader_1a58e34f0b1b6ddfccb60d341182cd422a" kind="enum"><name>DECODER_STATUS</name></member>
     <member refid="namespacegr_1_1reader_1a58e34f0b1b6ddfccb60d341182cd422aa149ce4b3391283cf3c7fa4cd1f08341e" kind="enumvalue"><name>DECODER_DECODE_RN16</name></member>
     <member refid="namespacegr_1_1reader_1a58e34f0b1b6ddfccb60d341182cd422aa085fd93afeefa2255973977eef73d067" kind="enumvalue"><name>DECODER_DECODE_EPC</name></member>
-    <member refid="namespacegr_1_1reader_1a3d4e65eaba5ca47419bf1b7b9fbaef58" kind="variable"><name>FIXED_Q</name></member>
-    <member refid="namespacegr_1_1reader_1a0e9558f84cc0aebd9e86511a235fb32b" kind="variable"><name>MAX_NUM_QUERIES</name></member>
+    <member refid="namespacegr_1_1reader_1a07da48b4e287de62234639bba8c58da1" kind="variable"><name>FIXED_Q</name></member>
+    <member refid="namespacegr_1_1reader_1a435e12b364f20b4e10ad62388fb7cf92" kind="variable"><name>MAX_NUM_QUERIES</name></member>
     <member refid="namespacegr_1_1reader_1acb973189861ad815cb9fa138776da18a" kind="variable"><name>Q_VALUE</name></member>
-    <member refid="namespacegr_1_1reader_1a9f95b9e1c5a79738ea1d180366bcf036" kind="variable"><name>P_DOWN</name></member>
+    <member refid="namespacegr_1_1reader_1abfce47f0dc5219fac21b38a504771200" kind="variable"><name>P_DOWN</name></member>
     <member refid="namespacegr_1_1reader_1a963b68ab3ccb8b7736afd1a0a83237a1" kind="variable"><name>CW_D</name></member>
     <member refid="namespacegr_1_1reader_1affb029fac8c161552088de74243bbb15" kind="variable"><name>P_DOWN_D</name></member>
     <member refid="namespacegr_1_1reader_1a665f2af132101acac0dc9dd33aadc075" kind="variable"><name>T1_D</name></member>
@@ -178,7 +179,7 @@
     <member refid="namespacegr_1_1reader_1a3d0be86e8592605b69fdc1b6076cd45d" kind="variable"><name>QUERY_CODE</name></member>
     <member refid="namespacegr_1_1reader_1a72aabe10c596f0c90287a5f6836779ae" kind="variable"><name>M</name></member>
     <member refid="namespacegr_1_1reader_1a81a9146ca716f48013a53acffe78d0e2" kind="variable"><name>SEL</name></member>
-    <member refid="namespacegr_1_1reader_1a1186382b91eef26b3b53f93435772313" kind="variable"><name>SESSION</name></member>
+    <member refid="namespacegr_1_1reader_1abde4a635897d14baf6044d25b0a3d8dd" kind="variable"><name>SESSION</name></member>
     <member refid="namespacegr_1_1reader_1a227287d9144757a5437f3cb8fc362b2d" kind="variable"><name>TARGET</name></member>
     <member refid="namespacegr_1_1reader_1ad07b1f04a76ec416c21381a92fe06f78" kind="variable"><name>TREXT</name></member>
     <member refid="namespacegr_1_1reader_1a0b40513b4a0679944bb2e53adc916506" kind="variable"><name>DR</name></member>
@@ -190,6 +191,7 @@
     <member refid="namespacegr_1_1reader_1ad882dfb3fb6bb2ec3740b1b4941babc5" kind="variable"><name>DC_SIZE_D</name></member>
     <member refid="namespacegr_1_1reader_1add9602133c95dfbf05f3432d16cb5a15" kind="variable"><name>reader_state</name></member>
     <member refid="namespacegr_1_1reader_1a0814509f13ec6fcfca7959c253a01e3f" kind="function"><name>initialize_reader_state</name></member>
+    <member refid="namespacegr_1_1reader_1a692c2e08ed7c3d22302df4efee279fe4" kind="function"><name>set_reader_config</name></member>
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
@@ -217,6 +219,7 @@
     <member refid="global__vars__pydoc__template_8h_1a0a0ccb18ccef61bc46c659422a17dfe6" kind="variable"><name>__doc_gr_reader_READER_STATE_READER_STATE_0</name></member>
     <member refid="global__vars__pydoc__template_8h_1abd8f28d6933662a28c61a5b2c19bb801" kind="variable"><name>__doc_gr_reader_READER_STATE_READER_STATE_1</name></member>
     <member refid="global__vars__pydoc__template_8h_1ac3c8ada6717924d93cf8b63ac6dcae01" kind="variable"><name>__doc_gr_reader_initialize_reader_state</name></member>
+    <member refid="global__vars__pydoc__template_8h_1a4be47c0547f928f5cc9c1a2cfb10828d" kind="variable"><name>__doc_gr_reader_set_reader_config</name></member>
   </compound>
   <compound refid="group__defs_8dox" kind="file"><name>group_defs.dox</name>
   </compound>

@@ -67,8 +67,8 @@ Inheritance diagram for gr::reader::reader_impl:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa2e853506569a3e4d4b0ca3393202c22"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgr_1_1reader_1_1reader__impl.html#aa2e853506569a3e4d4b0ca3393202c22">reader_impl</a> (float sample_rate, float dac_rate, int nums_sine, std::vector&lt; float &gt; freq, std::vector&lt; float &gt; amp)</td></tr>
-<tr class="separator:aa2e853506569a3e4d4b0ca3393202c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a182bd38067ebe1d26c79f14ee5238813"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgr_1_1reader_1_1reader__impl.html#a182bd38067ebe1d26c79f14ee5238813">reader_impl</a> (float sample_rate, float dac_rate, int nums_sine, std::vector&lt; float &gt; freq, std::vector&lt; float &gt; amp, int fixed_q, int max_num_queries, bool p_down, int session_0, int session_1)</td></tr>
+<tr class="separator:a182bd38067ebe1d26c79f14ee5238813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba28ea266f939de54287fce05c007054"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgr_1_1reader_1_1reader__impl.html#aba28ea266f939de54287fce05c007054">~reader_impl</a> ()</td></tr>
 <tr class="separator:aba28ea266f939de54287fce05c007054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a613dea6948f8af08ef738011b663f45f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgr_1_1reader_1_1reader__impl.html#a613dea6948f8af08ef738011b663f45f">print_results</a> ()</td></tr>
@@ -84,13 +84,13 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a40680436129db72814f66ff23ef76de1 inherit pub_types_classgr_1_1reader_1_1reader"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="classgr_1_1reader_1_1reader.html">reader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgr_1_1reader_1_1reader.html#a40680436129db72814f66ff23ef76de1">sptr</a></td></tr>
 <tr class="separator:a40680436129db72814f66ff23ef76de1 inherit pub_types_classgr_1_1reader_1_1reader"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classgr_1_1reader_1_1reader"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classgr_1_1reader_1_1reader')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classgr_1_1reader_1_1reader.html">gr::reader::reader</a></td></tr>
-<tr class="memitem:ace479402b5e1b87531f55c61d1063c4d inherit pub_static_methods_classgr_1_1reader_1_1reader"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classgr_1_1reader_1_1reader.html#a40680436129db72814f66ff23ef76de1">sptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgr_1_1reader_1_1reader.html#ace479402b5e1b87531f55c61d1063c4d">make</a> (float sample_rate, float dac_rate, int num_sines, std::vector&lt; float &gt; freqs, std::vector&lt; float &gt; amps)</td></tr>
-<tr class="memdesc:ace479402b5e1b87531f55c61d1063c4d inherit pub_static_methods_classgr_1_1reader_1_1reader"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a shared_ptr to a new instance of <a class="el" href="classgr_1_1reader_1_1reader.html" title="&lt;+description of block+&gt;">reader::reader</a>.  <a href="classgr_1_1reader_1_1reader.html#ace479402b5e1b87531f55c61d1063c4d">More...</a><br /></td></tr>
-<tr class="separator:ace479402b5e1b87531f55c61d1063c4d inherit pub_static_methods_classgr_1_1reader_1_1reader"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87936852b7907d9176a71188a2446ac6 inherit pub_static_methods_classgr_1_1reader_1_1reader"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classgr_1_1reader_1_1reader.html#a40680436129db72814f66ff23ef76de1">sptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgr_1_1reader_1_1reader.html#a87936852b7907d9176a71188a2446ac6">make</a> (float sample_rate, float dac_rate, int num_sines, std::vector&lt; float &gt; freqs, std::vector&lt; float &gt; amps, int fixed_q=0, int max_num_queries=1000, bool p_down=false, int session_0=0, int session_1=0)</td></tr>
+<tr class="memdesc:a87936852b7907d9176a71188a2446ac6 inherit pub_static_methods_classgr_1_1reader_1_1reader"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a shared_ptr to a new instance of <a class="el" href="classgr_1_1reader_1_1reader.html" title="&lt;+description of block+&gt;">reader::reader</a>.  <a href="classgr_1_1reader_1_1reader.html#a87936852b7907d9176a71188a2446ac6">More...</a><br /></td></tr>
+<tr class="separator:a87936852b7907d9176a71188a2446ac6 inherit pub_static_methods_classgr_1_1reader_1_1reader"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa2e853506569a3e4d4b0ca3393202c22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2e853506569a3e4d4b0ca3393202c22">&#9670;&nbsp;</a></span>reader_impl()</h2>
+<a id="a182bd38067ebe1d26c79f14ee5238813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a182bd38067ebe1d26c79f14ee5238813">&#9670;&nbsp;</a></span>reader_impl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -123,7 +123,37 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; float &gt;&#160;</td>
-          <td class="paramname"><em>amp</em>&#160;</td>
+          <td class="paramname"><em>amp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fixed_q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_num_queries</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>p_down</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>session_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>session_1</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

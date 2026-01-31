@@ -597,10 +597,10 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classgr_1_1reader_1_1reader__impl_1aa2e853506569a3e4d4b0ca3393202c22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classgr_1_1reader_1_1reader__impl_1a182bd38067ebe1d26c79f14ee5238813" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>gr::reader::reader_impl::reader_impl</definition>
-        <argsstring>(float sample_rate, float dac_rate, int nums_sine, std::vector&lt; float &gt; freq, std::vector&lt; float &gt; amp)</argsstring>
+        <argsstring>(float sample_rate, float dac_rate, int nums_sine, std::vector&lt; float &gt; freq, std::vector&lt; float &gt; amp, int fixed_q, int max_num_queries, bool p_down, int session_0, int session_1)</argsstring>
         <name>reader_impl</name>
         <param>
           <type>float</type>
@@ -622,6 +622,26 @@
           <type>std::vector&lt; float &gt;</type>
           <declname>amp</declname>
         </param>
+        <param>
+          <type>int</type>
+          <declname>fixed_q</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_num_queries</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>p_down</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>session_0</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>session_1</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -641,7 +661,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/reader_impl.h" line="77" column="5"/>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/reader_impl.h" line="86" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1reader_1_1reader__impl_1a613dea6948f8af08ef738011b663f45f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -655,7 +675,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/reader_impl.h" line="79" column="10"/>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/reader_impl.h" line="88" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1reader_1_1reader__impl_1a70c1b5a05751990e4e74e7e8d2cf7da4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -676,7 +696,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/reader_impl.h" line="82" column="10"/>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/reader_impl.h" line="91" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1reader_1_1reader__impl_1a006cdacc192883f41ede04e73cd203d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -705,7 +725,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/reader_impl.h" line="84" column="9"/>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/reader_impl.h" line="93" column="9"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -746,7 +766,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/reader_impl.h" line="20" column="1" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/reader_impl.h" bodystart="21" bodyend="89"/>
+    <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/reader_impl.h" line="20" column="1" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/lib/reader_impl.h" bodystart="21" bodyend="98"/>
     <listofallmembers>
       <member refid="classgr_1_1reader_1_1reader__impl_1a8805ca8fae158a4057b22cb2790bb920" prot="private" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>ack_bits</name></member>
       <member refid="classgr_1_1reader_1_1reader__impl_1a41e034eb685c7f72233c26406de24e66" prot="private" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>append_vec</name></member>
@@ -770,7 +790,7 @@
       <member refid="classgr_1_1reader_1_1reader__impl_1ac2785cceec75f791c7cd00ef09072745" prot="private" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>gen_query_adjust_bits</name></member>
       <member refid="classgr_1_1reader_1_1reader__impl_1ad4c270b55d99d587df8a0175092de501" prot="private" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>gen_query_bits</name></member>
       <member refid="classgr_1_1reader_1_1reader__impl_1a006cdacc192883f41ede04e73cd203d6" prot="public" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>general_work</name></member>
-      <member refid="classgr_1_1reader_1_1reader_1ace479402b5e1b87531f55c61d1063c4d" prot="public" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1reader_1_1reader_1a87936852b7907d9176a71188a2446ac6" prot="public" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>make</name></member>
       <member refid="classgr_1_1reader_1_1reader__impl_1a5bd0689b1349d117dadc2435d810c36c" prot="private" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>n_cw_s</name></member>
       <member refid="classgr_1_1reader_1_1reader__impl_1af78eaab9c6fdbffcc3804ac772f10a36" prot="private" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>n_cwack_s</name></member>
       <member refid="classgr_1_1reader_1_1reader__impl_1a0729ad512a5b03d7a40d04230ea0f384" prot="private" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>n_cwquery_s</name></member>
@@ -789,7 +809,7 @@
       <member refid="classgr_1_1reader_1_1reader__impl_1a1f2a26559802e26d9618ed73313ad697" prot="private" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>query_adjust_bits</name></member>
       <member refid="classgr_1_1reader_1_1reader__impl_1a68293935e0ab5ece5dd5845f0995cdcb" prot="private" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>query_bits</name></member>
       <member refid="classgr_1_1reader_1_1reader__impl_1aed81fde692bee86fd1ad76b452e1af00" prot="private" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>query_rep</name></member>
-      <member refid="classgr_1_1reader_1_1reader__impl_1aa2e853506569a3e4d4b0ca3393202c22" prot="public" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>reader_impl</name></member>
+      <member refid="classgr_1_1reader_1_1reader__impl_1a182bd38067ebe1d26c79f14ee5238813" prot="public" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>reader_impl</name></member>
       <member refid="classgr_1_1reader_1_1reader__impl_1a38371829f4589a475abb22c24c8a8701" prot="private" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>rtcal</name></member>
       <member refid="classgr_1_1reader_1_1reader__impl_1a09a765142e406e3b7e516f3019c5e691" prot="private" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>s_rate</name></member>
       <member refid="classgr_1_1reader_1_1reader__impl_1a6d1e1eec44387966187b14da186bcc23" prot="private" virt="non-virtual"><scope>gr::reader::reader_impl</scope><name>sample_d</name></member>

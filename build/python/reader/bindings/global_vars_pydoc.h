@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Free Software Foundation, Inc.
+ * Copyright 2026 Free Software Foundation, Inc.
  *
  * This file is part of GNU Radio
  *
@@ -35,5 +35,8 @@
 
 
  static const char *__doc_gr_reader_initialize_reader_state = R"doc()doc";
+
+
+ static const char *__doc_gr_reader_set_reader_config = R"doc()doc";
 
   

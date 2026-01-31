@@ -139,6 +139,8 @@ int gate_impl::general_work(int noutput_items,
                 if(n_samples > n_samples_T1 && signal_state == POS_EDGE && num_pulses > NUM_PULSES_COMMAND)
                 {
                     GR_LOG_INFO(d_debug_logger, "READER COMMAND DETECTED");
+                    GR_LOG_INFO(d_debug_logger, "Gate open: num_pulses=" + std::to_string(num_pulses) +
+                                                 " n_samples=" + std::to_string(n_samples));
                     reader_state->gate_status = GATE_OPEN;
 
                     reader_state->magn_squared_samples.resize(0);

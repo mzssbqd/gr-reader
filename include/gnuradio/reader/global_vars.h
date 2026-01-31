@@ -11,6 +11,7 @@
 #include <gnuradio/reader/api.h>
 #include <vector>
 #include <map>
+#include <string>
 #include <sys/time.h>
 #include <math.h>
 #include <gnuradio/logger.h>
@@ -33,6 +34,7 @@ namespace reader {
         int n_epc_correct;           // CRC 校验通过的 EPC 次数（成功解码次数）
         std::vector<int> unique_tags_round; // 每轮盘存读到的“唯一标签数”（每轮结束 push_back 一次计数）
         std::map<int,int> tag_reads;         // 标签读数统计：tag_id -> 成功读到次数（tag_id 在实现里从 EPC 某些 bit 抽取）
+        std::map<int,std::string> tag_epc_hex; // 标签 EPC 记录：tag_id -> EPC(HEX)
         struct timeval start, end;   // 运行起止时间（用于耗时/吞吐统计）
     };
 
@@ -52,11 +54,11 @@ namespace reader {
 
     // 配置
 
-    // Fixed number of slots (2^(FIXED_Q))  
-    const int FIXED_Q       = 0;
+    // Fixed number of slots (2^(FIXED_Q))
+    extern READER_API int FIXED_Q;
 
     // const int MAX_INVENTORY_ROUND = 50;
-    const int MAX_NUM_QUERIES     = 1000;     // Stop after MAX_NUM_QUERIES have been sent 
+    extern READER_API int MAX_NUM_QUERIES;     // Stop after MAX_NUM_QUERIES have been sent 
 
     // valid values for Q
     const int Q_VALUE [16][4] =  
@@ -67,7 +69,7 @@ namespace reader {
         {1,1,0,0}, {1,1,0,1}, {1,1,1,0}, {1,1,1,1}
     };
 
-    const bool P_DOWN = false;
+    extern READER_API bool P_DOWN;
 
     // Duration in us（单位：微秒 us）
     // reader ---> tag
@@ -108,7 +110,7 @@ namespace reader {
     const int QUERY_CODE[4] = {1,0,0,0};
     const int M[2]          = {0,0};
     const int SEL[2]         = {0,0};
-    const int SESSION[2]     = {0,0};
+    extern READER_API int SESSION[2];
     const int TARGET         = 0;
     const int TREXT         = 0;
     const int DR            = 0;
@@ -134,6 +136,11 @@ namespace reader {
     // Global variable
     extern READER_STATE * reader_state;
     extern READER_API void initialize_reader_state();
+    extern READER_API void set_reader_config(int fixed_q,
+                                             int max_num_queries,
+                                             bool p_down,
+                                             int session_0,
+                                             int session_1);
 } // namespace reader
 } // namespace gr
 

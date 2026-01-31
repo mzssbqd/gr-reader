@@ -8,12 +8,32 @@
 #include "tag_decoder_impl.h"
 #include <gnuradio/io_signature.h>
 #include <vector>
+#include <string>
 
 namespace gr {
 namespace reader {
 
 using input_type = gr_complex;
 using output_type = std::vector<int>;
+
+static std::string bits_to_hex(const std::vector<float>& bits, size_t start, size_t len)
+{
+    static const char* kHex = "0123456789ABCDEF";
+    std::string out;
+    if (len == 0 || start + len > bits.size()) {
+        return out;
+    }
+    const size_t nibbles = len / 4;
+    out.reserve(nibbles);
+    for (size_t i = 0; i < nibbles; ++i) {
+        int v = 0;
+        for (size_t b = 0; b < 4; ++b) {
+            v = (v << 1) | (bits[start + i * 4 + b] > 0.5f ? 1 : 0);
+        }
+        out.push_back(kHex[v & 0xF]);
+    }
+    return out;
+}
 
 tag_decoder::sptr tag_decoder::make(float sample_rate)
 {
@@ -37,6 +57,7 @@ tag_decoder_impl::tag_decoder_impl(float sample_rate, std::vector<int> output_si
     char_bits = (char *) malloc( sizeof(char) * 128);
     n_samples_TAG_BIT = TAG_BIT_D * s_rate / pow(10,6);
 
+    std::cout << "FIXED_Q: " << FIXED_Q << std::endl;
 }
 
 /*
@@ -138,6 +159,8 @@ int tag_decoder_impl::general_work(int noutput_items,
 
         EPC_bits = tag_detection_EPC(EPC_samples_complex,EPC_index);
 
+        GR_LOG_INFO(d_debug_logger, "EPC decode attempt: bits=" + std::to_string(EPC_bits.size()));
+
         if (EPC_bits.size() == EPC_BITS - 1)
         {
             // float to char -> use Buettner's function
@@ -152,6 +175,10 @@ int tag_decoder_impl::general_work(int noutput_items,
             if(check_crc(char_bits,128) == 1)
             {
                 GR_LOG_INFO(d_debug_logger, "EPC DECODED");
+                std::string epc_hex = bits_to_hex(EPC_bits, 16, 96);
+                if (!epc_hex.empty()) {
+                    GR_LOG_INFO(d_debug_logger, "EPC HEX: " + epc_hex);
+                }
                 if(reader_state->reader_stats.cur_slot_number > reader_state->reader_stats.max_slot_number)
                 {
                     reader_state->reader_stats.cur_slot_number = 1;
@@ -175,6 +202,7 @@ int tag_decoder_impl::general_work(int noutput_items,
                 {
                     result += std::pow(2,7-i) * EPC_bits[104+i] ;
                 }
+                GR_LOG_INFO(d_debug_logger, "Tag ID: " + std::to_string(result));
 
                 // Save part of Tag's EPC message (EPC[104:111] in decimal) + number of reads
                 std::map<int,int>::iterator it = reader_state->reader_stats.tag_reads.find(result);
@@ -186,9 +214,18 @@ int tag_decoder_impl::general_work(int noutput_items,
                 {
                     reader_state->reader_stats.tag_reads[result]=1;
                 }
+                if (!epc_hex.empty()) {
+                    reader_state->reader_stats.tag_epc_hex[result] = epc_hex;
+                }
             }
             else
             {
+                std::string epc_hex = bits_to_hex(EPC_bits, 16, 96);
+                if (!epc_hex.empty()) {
+                    GR_LOG_INFO(d_debug_logger, "EPC CRC FAIL, HEX: " + epc_hex);
+                } else {
+                    GR_LOG_INFO(d_debug_logger, "EPC CRC FAIL");
+                }
                 if(reader_state->reader_stats.cur_slot_number > reader_state->reader_stats.max_slot_number)
                 {
                     reader_state->reader_stats.cur_slot_number = 1;
@@ -210,7 +247,7 @@ int tag_decoder_impl::general_work(int noutput_items,
         }
         else
         {
-            GR_LOG_EMERG(d_debug_logger, "CHECK ME");  
+            GR_LOG_INFO(d_debug_logger, "EPC length mismatch");
         }
         consumed = reader_state->n_samples_to_ungate;
     }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Free Software Foundation, Inc.
+ * Copyright 2026 Free Software Foundation, Inc.
  *
  * This file is part of GNU Radio
  *
@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(global_vars.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(0e26144cf6b54975753cdd1074e70aab)                     */
+/* BINDTOOL_HEADER_FILE_HASH(7d001d7fff88613e10797cfa7fc33cf7)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -99,6 +99,16 @@ void bind_global_vars(py::module& m)
 
         m.def("initialize_reader_state",&::gr::reader::initialize_reader_state,
             D(initialize_reader_state)
+        );
+
+
+        m.def("set_reader_config",&::gr::reader::set_reader_config,
+            py::arg("fixed_q"),
+            py::arg("max_num_queries"),
+            py::arg("p_down"),
+            py::arg("session_0"),
+            py::arg("session_1"),
+            D(set_reader_config)
         );
 
 

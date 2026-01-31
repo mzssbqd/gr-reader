@@ -21,10 +21,10 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="classgr_1_1reader_1_1reader_1ace479402b5e1b87531f55c61d1063c4d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classgr_1_1reader_1_1reader_1a87936852b7907d9176a71188a2446ac6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classgr_1_1reader_1_1reader_1a40680436129db72814f66ff23ef76de1" kindref="member">sptr</ref></type>
         <definition>static sptr gr::reader::reader::make</definition>
-        <argsstring>(float sample_rate, float dac_rate, int num_sines, std::vector&lt; float &gt; freqs, std::vector&lt; float &gt; amps)</argsstring>
+        <argsstring>(float sample_rate, float dac_rate, int num_sines, std::vector&lt; float &gt; freqs, std::vector&lt; float &gt; amps, int fixed_q=0, int max_num_queries=1000, bool p_down=false, int session_0=0, int session_1=0)</argsstring>
         <name>make</name>
         <param>
           <type>float</type>
@@ -46,11 +46,36 @@
           <type>std::vector&lt; float &gt;</type>
           <declname>amps</declname>
         </param>
+        <param>
+          <type>int</type>
+          <declname>fixed_q</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_num_queries</declname>
+          <defval>1000</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>p_down</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>session_0</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>session_1</declname>
+          <defval>0</defval>
+        </param>
         <briefdescription>
 <para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1reader_1_1reader" kindref="compound">reader::reader</ref>. </para>
         </briefdescription>
         <detaileddescription>
-<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1reader_1_1reader" kindref="compound">reader::reader</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1reader_1_1reader_1ace479402b5e1b87531f55c61d1063c4d" kindref="member">reader::reader::make</ref> is the public interface for creating new instances. </para>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1reader_1_1reader" kindref="compound">reader::reader</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1reader_1_1reader_1a87936852b7907d9176a71188a2446ac6" kindref="member">reader::reader::make</ref> is the public interface for creating new instances. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -70,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/reader.h" line="36" column="18"/>
+        <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/reader.h" line="45" column="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -106,9 +131,9 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/reader.h" line="23" column="1" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/reader.h" bodystart="24" bodyend="37"/>
+    <location file="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/reader.h" line="23" column="1" bodyfile="/home/mzssbqd/Desktop/myOOT/gr-reader/include/gnuradio/reader/reader.h" bodystart="24" bodyend="46"/>
     <listofallmembers>
-      <member refid="classgr_1_1reader_1_1reader_1ace479402b5e1b87531f55c61d1063c4d" prot="public" virt="non-virtual"><scope>gr::reader::reader</scope><name>make</name></member>
+      <member refid="classgr_1_1reader_1_1reader_1a87936852b7907d9176a71188a2446ac6" prot="public" virt="non-virtual"><scope>gr::reader::reader</scope><name>make</name></member>
       <member refid="classgr_1_1reader_1_1reader_1a595d2720ddcda29d5363ca2dcc2c231d" prot="public" virt="pure-virtual"><scope>gr::reader::reader</scope><name>print_results</name></member>
       <member refid="classgr_1_1reader_1_1reader_1a40680436129db72814f66ff23ef76de1" prot="public" virt="non-virtual"><scope>gr::reader::reader</scope><name>sptr</name></member>
     </listofallmembers>

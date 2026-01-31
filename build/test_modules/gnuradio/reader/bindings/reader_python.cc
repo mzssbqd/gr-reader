@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Free Software Foundation, Inc.
+ * Copyright 2026 Free Software Foundation, Inc.
  *
  * This file is part of GNU Radio
  *
@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(reader.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(403b7503ed867632f7e9c26712052b95)                     */
+/* BINDTOOL_HEADER_FILE_HASH(89ec9f94f88b902b03747b017a82b6c8)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -42,6 +42,11 @@ void bind_reader(py::module& m)
            py::arg("num_sines"),
            py::arg("freqs"),
            py::arg("amps"),
+           py::arg("fixed_q") = 0,
+           py::arg("max_num_queries") = 1000,
+           py::arg("p_down") = false,
+           py::arg("session_0") = 0,
+           py::arg("session_1") = 0,
            D(reader,make)
         )
         

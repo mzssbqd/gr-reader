@@ -4,7 +4,7 @@ category: '[reader]'
 
 templates:
   imports: from gnuradio import reader
-  make: reader.reader(${sample_rate}, ${dac_rate}, ${num_sines}, ${freqs}, ${amps})
+  make: reader.reader(${sample_rate}, ${dac_rate}, ${num_sines}, ${freqs}, ${amps}, ${fixed_q}, ${max_num_queries}, ${p_down}, ${session_0}, ${session_1})
 
 parameters:
 - id: sample_rate
@@ -31,6 +31,31 @@ parameters:
   label: Carrier Amplitudes
   dtype: float_vector
   default: [0.2, 0.2, 0.2]
+
+- id: fixed_q
+  label: Fixed Q
+  dtype: int
+  default: 0
+
+- id: max_num_queries
+  label: Max Queries
+  dtype: int
+  default: 1000
+
+- id: p_down
+  label: Power Down
+  dtype: bool
+  default: False
+
+- id: session_0
+  label: Session Bit 0
+  dtype: int
+  default: 0
+
+- id: session_1
+  label: Session Bit 1
+  dtype: int
+  default: 0
 
 inputs:
 - label: bits

@@ -11,21 +11,49 @@
 #include <gnuradio/reader/global_vars.h>
 #include <algorithm>
 #include <cmath>
+#include <string>
 
 namespace gr {
 namespace reader {
 
 using input_type = float;
 using output_type = float;
-reader::sptr reader::make(float sample_rate, float dac_rate, int num_sines, std::vector<float> freqs, std::vector<float> amps) {
-    return gnuradio::make_block_sptr<reader_impl>(sample_rate, dac_rate, num_sines, freqs, amps); 
+reader::sptr reader::make(float sample_rate,
+                          float dac_rate,
+                          int num_sines,
+                          std::vector<float> freqs,
+                          std::vector<float> amps,
+                          int fixed_q,
+                          int max_num_queries,
+                          bool p_down,
+                          int session_0,
+                          int session_1) {
+    return gnuradio::make_block_sptr<reader_impl>(sample_rate,
+                                                 dac_rate,
+                                                 num_sines,
+                                                 freqs,
+                                                 amps,
+                                                 fixed_q,
+                                                 max_num_queries,
+                                                 p_down,
+                                                 session_0,
+                                                 session_1);
 }
 
 
 /*
  * The private constructor
  */
-reader_impl::reader_impl(float sample_rate, float dac_rate, int num_sines, std::vector<float> freqs, std::vector<float> amps)
+reader_impl::reader_impl(float sample_rate,
+                         float dac_rate,
+                         int num_sines,
+                         std::vector<float> freqs,
+                         std::vector<float> amps,
+                         int fixed_q,
+                         int max_num_queries,
+                         bool p_down,
+                         int session_0,
+                         int session_1)
     : gr::block("reader",
                 gr::io_signature::make(
                     1 /* min inputs */, 1 /* max inputs */, sizeof(input_type)),
@@ -34,6 +62,7 @@ reader_impl::reader_impl(float sample_rate, float dac_rate, int num_sines, std::
                     d_num_sines(num_sines), d_freqs(freqs), d_amps(amps)
 {
     GR_LOG_INFO(d_logger, "block initialized");
+    set_reader_config(fixed_q, max_num_queries, p_down, session_0, session_1);
 
     sample_d = 1.0 / dac_rate * pow(10,6);
 
@@ -52,7 +81,7 @@ reader_impl::reader_impl(float sample_rate, float dac_rate, int num_sines, std::
     n_p_down_s    = (P_DOWN_D)/sample_d;
     n_extra_cw    = (T1_D+T2_D+EPC_D)/sample_d;
 
-    p_down.resize(n_p_down_s);        // Power down samples
+    this->p_down.resize(n_p_down_s);        // Power down samples
     cw_query.resize(n_cwquery_s);      // Sent after query/query rep
     cw_ack.resize(n_cwack_s);          // Sent after ack
     extra_cw.resize(n_cwack_s);
@@ -77,7 +106,6 @@ reader_impl::reader_impl(float sample_rate, float dac_rate, int num_sines, std::
             (size_t)std::max(0.0f, (float)(0.3f * T1_D / sample_d)),
             extra_cw.size());
         const size_t mt_start = n_pre_plain;
-        const size_t mt_end = extra_cw.size();
 
         for (size_t n = 0; n < extra_cw.size(); n++) {
             if (n < mt_start) {
@@ -239,6 +267,8 @@ int reader_impl::general_work(int noutput_items,
         case SEND_QUERY: {
 
             GR_LOG_INFO(d_debug_logger, "QUERY");
+            GR_LOG_INFO(d_debug_logger, "Round=" + std::to_string(reader_state->reader_stats.cur_inventory_round) +
+                                          " Slot=" + std::to_string(reader_state->reader_stats.cur_slot_number));
             // GR_LOG_INFO(d_debug_logger, "INVENTORY ROUND : " << reader_state->reader_stats.cur_inventory_round << " SLOT NUMBER : " << reader_state->reader_stats.cur_slot_number);
 
             reader_state->reader_stats.n_queries_sent +=1;
@@ -317,6 +347,8 @@ int reader_impl::general_work(int noutput_items,
             break;
         case SEND_QUERY_REP: {
             GR_LOG_INFO(d_debug_logger, "SEND QUERY_REP");
+            GR_LOG_INFO(d_debug_logger, "Round=" + std::to_string(reader_state->reader_stats.cur_inventory_round) +
+                                          " Slot=" + std::to_string(reader_state->reader_stats.cur_slot_number));
             // GR_LOG_INFO(d_debug_logger, "INVENTORY ROUND : " << reader_state->reader_stats.cur_inventory_round << " SLOT NUMBER : " << reader_state->reader_stats.cur_slot_number);
             
             // Controls the other two blocks
@@ -485,7 +517,17 @@ void reader_impl::print_results()
 
     for(it = reader_state->reader_stats.tag_reads.begin(); it != reader_state->reader_stats.tag_reads.end(); it++) 
     {
+        std::string epc_hex = "";
+        std::map<int, std::string>::iterator epc_it = reader_state->reader_stats.tag_epc_hex.find(it->first);
+        if (epc_it != reader_state->reader_stats.tag_epc_hex.end()) {
+            epc_hex = epc_it->second;
+        }
         std::cout << std::hex <<  "| Tag ID : " << it->first << "  ";
+        if (!epc_hex.empty()) {
+            std::cout << "EPC HEX : " << epc_hex << "  ";
+        } else {
+            std::cout << "EPC HEX : (unknown)  ";
+        }
         std::cout << "Num of reads : " << std::dec << it->second << std::endl;
     }
 

@@ -6,8 +6,11 @@
     <includes refid="global__vars_8h" local="no">gnuradio/reader/global_vars.h</includes>
     <includes local="no">vector</includes>
     <incdepgraph>
-      <node id="11">
+      <node id="12">
         <label>gnuradio/logger.h</label>
+      </node>
+      <node id="9">
+        <label>string</label>
       </node>
       <node id="8">
         <label>map</label>
@@ -46,11 +49,13 @@
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
       </node>
-      <node id="10">
+      <node id="11">
         <label>math.h</label>
       </node>
-      <node id="9">
+      <node id="10">
         <label>sys/time.h</label>
       </node>
       <node id="4">

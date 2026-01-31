@@ -73,7 +73,16 @@ private:
         dst.insert(dst.end(), src.begin(), src.end());
     }
 public:
-    reader_impl(float sample_rate, float dac_rate, int nums_sine, std::vector<float> freq, std::vector<float> amp);
+    reader_impl(float sample_rate,
+                float dac_rate,
+                int nums_sine,
+                std::vector<float> freq,
+                std::vector<float> amp,
+                int fixed_q,
+                int max_num_queries,
+                bool p_down,
+                int session_0,
+                int session_1);
     ~reader_impl();
 
     void print_results();

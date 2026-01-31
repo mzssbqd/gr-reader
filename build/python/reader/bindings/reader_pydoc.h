@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Free Software Foundation, Inc.
+ * Copyright 2026 Free Software Foundation, Inc.
  *
  * This file is part of GNU Radio
  *
@@ -29,7 +29,12 @@ Args:
     dac_rate : 
     num_sines : 
     freqs : 
-    amps : )doc";
+    amps : 
+    fixed_q : 
+    max_num_queries : 
+    p_down : 
+    session_0 : 
+    session_1 : )doc";
 
 
  static const char *__doc_gr_reader_reader_reader_0 = R"doc()doc";
@@ -51,7 +56,12 @@ Args:
     dac_rate : 
     num_sines : 
     freqs : 
-    amps : )doc";
+    amps : 
+    fixed_q : 
+    max_num_queries : 
+    p_down : 
+    session_0 : 
+    session_1 : )doc";
 
 
  static const char *__doc_gr_reader_reader_print_results = R"doc()doc";

@@ -102,16 +102,9 @@ reader_impl::reader_impl(float sample_rate,
             max_cw_amps -= amps[k];
         }
 
-        const size_t n_pre_plain = std::min(
-            (size_t)std::max(0.0f, (float)(0.3f * T1_D / sample_d)),
-            extra_cw.size());
-        const size_t mt_start = n_pre_plain;
+        const size_t mt_start = 0;
 
         for (size_t n = 0; n < extra_cw.size(); n++) {
-            if (n < mt_start) {
-                extra_cw[n] = 1.0f;
-                continue;
-            }
 
             float s = max_cw_amps;  // base CW
 
